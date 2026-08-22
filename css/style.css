@@ -1084,7 +1084,7 @@ body.dark-mode .h1-desk-facts{border-color:#3a2f29;}
 .home2-cta .btn-brand:hover{background:#f9ece8;border-color:#f9ece8;}
 .home2-cta .btn-brand-outline{color:#fff;border-color:rgba(255,255,255,.6);}
 .home2-cta .btn-brand-outline:hover{background:#fff;color:var(--green-700);}
-@media(max-width:1000px){.home2-category-grid{grid-template-columns:repeat(2,1fr)}.home2-feature-grid{grid-template-columns:repeat(2,1fr)}.home2-trust-grid{grid-template-columns:repeat(2,1fr)}.home2-split{grid-template-columns:1fr}.home2-split.reverse .home2-split-image{order:2}.home2-cta .container-xl{display:grid}}
+@media(max-width:1199px){.home2-category-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.home2-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.home2-trust-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.home2-split{grid-template-columns:1fr}.home2-split.reverse .home2-split-image{order:2}.home2-cta .container-xl{display:grid}}
 @media(max-width:700px){.home2-category-grid,.home2-feature-grid,.home2-steps,.home2-trust-grid{grid-template-columns:1fr}.home2-category{grid-template-columns:100px 1fr}.home2-category img{width:100px;height:90px}.home2-copy{padding:40px 0}.home2-hero,.home2-hero-content{min-height:440px}.home2-hero-bg,.home1-hero-bg,.home2-hero-bg-alt{background-position:center top!important;}.auth-home-nav{top:18px;left:22px}.auth-home-secondary{display:none}.auth-form-side{padding-top:95px!important}}
 @media(max-width:480px){.home2-hero,.home2-hero-content{min-height:380px}}
 /* ---------- FINAL V17: reliable Home 1/Home 2 navigation ---------- */
@@ -2425,15 +2425,16 @@ html[dir="rtl"] .nav-home-item.is-open .dropdown-arrow {
   visibility: visible !important;
 }
 
-/* Tablet responsive 2-column layout for 4-card grids (701px to 1199px) */
-@media (min-width: 701px) and (max-width: 1199px) {
+/* Tablet responsive 2-column layout for 4-card grids (601px to 1199px) */
+@media (min-width: 601px) and (max-width: 1199px) {
   .home2-feature-grid,
   .cc-trust-grid,
   .home2-trust-grid,
   .step-row,
   .why-tieup-row,
   .four-card-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 20px !important;
     align-items: stretch !important;
   }
