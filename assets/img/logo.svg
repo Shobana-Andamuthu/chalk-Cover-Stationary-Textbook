@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="ccLogoTitle">
+  <title id="ccLogoTitle">Chalk &amp; Cover logo</title>
+  <defs>
+    <linearGradient id="ccBadgeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF8A5B"/>
+      <stop offset="1" stop-color="#D9481F"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Badge -->
+  <rect x="1" y="1" width="62" height="62" rx="18" fill="url(#ccBadgeGrad)"/>
+  <rect x="1" y="1" width="62" height="62" rx="18" fill="none" stroke="#2A1B14" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- Open book -->
+  <g fill="#FFF6ED">
+    <path d="M32 21.5c-3.6-2.9-8.2-4.3-13.4-4.3-1.1 0-2.1.9-2.1 2v19.2c0 1 .8 1.9 1.8 2 5.2.4 9.7 1.8 13.1 4.4.4.3.9.3 1.2 0 3.4-2.6 7.9-4 13.1-4.4 1-.1 1.8-1 1.8-2V19.2c0-1.1-1-2-2.1-2-5.2 0-9.8 1.4-13.4 4.3z"/>
+  </g>
+  <path d="M32 21.5v22.3" fill="none" stroke="#D9481F" stroke-width="1.6" stroke-linecap="round"/>
+  <g fill="none" stroke="#D9481F" stroke-width="1.3" stroke-linecap="round" opacity=".55">
+    <path d="M20.3 23.6c3 .3 6.2 1.1 8.6 2.7"/>
+    <path d="M20.3 28.6c3 .3 6.2 1.1 8.6 2.7"/>
+    <path d="M20.3 33.6c3 .3 6.2 1.1 8.6 2.7"/>
+    <path d="M43.7 23.6c-3 .3-6.2 1.1-8.6 2.7"/>
+    <path d="M43.7 28.6c-3 .3-6.2 1.1-8.6 2.7"/>
+    <path d="M43.7 33.6c-3 .3-6.2 1.1-8.6 2.7"/>
+  </g>
+
+  <!-- Pencil crossing over the book, top-right -->
+  <g transform="translate(38.5 10.5) rotate(45)">
+    <rect x="0" y="0" width="6.4" height="21" rx="1.6" fill="#FFF6ED"/>
+    <rect x="0" y="0" width="6.4" height="5.4" rx="1.4" fill="#2A1B14"/>
+    <path d="M0 21 L3.2 26.4 L6.4 21 Z" fill="#F2B24A"/>
+    <path d="M2.1 21 L3.2 24.6 L4.3 21 Z" fill="#2A1B14"/>
+  </g>
+</svg>

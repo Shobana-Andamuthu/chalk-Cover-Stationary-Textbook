@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Products by Class Level | Chalk &amp; Cover</title>
+<meta content="Shop textbooks, notebooks, pens, art supplies and geometry boxes organised by primary, middle and secondary class level." name="description"/>
+<link href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%23FF6B3D%22/&gt;&lt;text x=%2250%22 y=%2266%22 font-size=%2250%22 font-family=%22sans-serif%22 fill=%22white%22 text-anchor=%22middle%22&gt;C&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&amp;family=Inter:wght@400;500;600;700;800&amp;family=Caveat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Bootstrap 5 (grid, accordion, nav components) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Tailwind CSS (utility classes) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: { 50:'#FFF6F0',100:'#FFE4D6',400:'#FFAB85',500:'#FF8A5B',600:'#FF6B3D',700:'#D9481F' },
+          ink: { 900:'#1B2116',700:'#3A4335',500:'#5D6657' }
+        },
+        fontFamily: { display:['Baloo 2','sans-serif'], body:['Inter','sans-serif'] }
+      }
+    }
+  }
+</script>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="products.html" rel="canonical"/>
+</head>
+<body class="font-body">
+<header class="site-navbar">
+<nav class="container-xl">
+<a class="brand" href="index.html"><img alt="Chalk &amp; Cover logo" class="brand-logo" height="36" src="assets/img/logo.svg" width="36"/>
+<span class="brand-word">Chalk &amp; Cover<small>Stationery &amp; Textbooks</small></span>
+</a>
+<ul class="nav-links"><li class="nav-home-item"><a class="nav-home-link nav-home-trigger" href="index.html" aria-haspopup="true">Home <svg class="icon-svg dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" style="margin-left:3px; display:inline-block; vertical-align:middle;"><path d="M6 9l6 6 6-6"></path></svg></a><div aria-label="Home page options" class="nav-home-menu"><a href="index.html">Home 1</a><a href="home2.html">Home 2</a></div></li><li><a href="about.html">About</a></li><li><a class="active" href="products.html">Products</a></li><li><a href="school-tieups.html">School Tie-Ups</a></li><li><a href="bulk-pricing.html">Bulk Pricing</a></li><li><a href="contact.html">Contact</a></li><li class="nav-mobile-only nav-mobile-settings" style="display:none;"><button aria-label="Switch to dark mode" aria-pressed="false" class="nav-icon-btn theme-toggle-btn" title="Toggle dark / light mode" type="button"><svg class="icon-svg theme-icon-sun" height="16" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg><svg class="icon-svg theme-icon-moon" height="16" viewbox="0 0 24 24" width="16"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"></path></svg><span>Dark Mode</span></button><button aria-label="Switch to right-to-left layout" aria-pressed="false" class="nav-icon-btn dir-toggle-btn" title="Toggle LTR / RTL direction" type="button"><svg class="icon-svg" height="16" viewbox="0 0 24 24" width="16"><path d="M17 3h4v4M21 3l-6 6"></path><path d="M7 21H3v-4M3 21l6-6"></path></svg><span class="dir-toggle-label">LTR</span></button></li><li class="nav-mobile-only nav-mobile-login-item"><a class="nav-mobile-login" href="login.html"><svg class="icon-svg" height="16" viewbox="0 0 24 24" width="16"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" x2="3" y1="12" y2="12"></line></svg><span>Login</span></a></li></ul>
+<div class="nav-tools">
+<a class="auth-nav-link" href="login.html">Login</a>
+<button aria-label="Switch to dark mode" aria-pressed="false" class="nav-icon-btn theme-toggle-btn" id="themeToggleBtn" title="Toggle dark / light mode" type="button"><svg class="icon-svg theme-icon-sun" height="18" viewbox="0 0 24 24" width="18"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg><svg class="icon-svg theme-icon-moon" height="18" viewbox="0 0 24 24" width="18"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"></path></svg></button><button aria-label="Switch to right-to-left layout" aria-pressed="false" class="nav-icon-btn dir-toggle-btn" id="dirToggleBtn" title="Toggle LTR / RTL direction" type="button"><svg aria-hidden="true" class="icon-svg dir-toggle-icon" height="17" viewbox="0 0 24 24" width="17"><path d="M4 7h12"></path><path d="M13 3l4 4-4 4"></path><path d="M20 17H8"></path><path d="M11 13l-4 4 4 4"></path></svg><span class="dir-toggle-label">LTR</span></button><button aria-expanded="false" aria-label="Toggle menu" class="nav-toggle"><svg class="icon-svg nav-toggle-icon-open" height="20" viewbox="0 0 24 24" width="20"><path d="M3 12h18"></path><path d="M3 6h18"></path><path d="M3 18h18"></path></svg><svg class="icon-svg nav-toggle-icon-close" height="20" viewbox="0 0 24 24" width="20"><path d="M18 6L6 18"></path><path d="M6 6l12 12"></path></svg></button>
+</div>
+</nav>
+</header>
+<!-- PAGE HEADER -->
+<section style="background:var(--green-50);padding:44px 0 34px;">
+<div class="container-xl">
+<p class="eyebrow"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg> Shop the full range</p>
+<h1 style="font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:8px;">Products, organised by class level</h1>
+<p style="color:var(--ink-500);max-width:640px;margin:0;">Textbooks, notebooks, pens, art supplies and geometry boxes — filtered the way your school's booklist is structured.</p>
+</div>
+</section>
+<section class="section-pad-sm">
+<div class="container-xl">
+<!-- LEVEL TABS -->
+<div class="search-result-label" id="searchResultLabel" style="display:none;margin:-8px 0 18px;color:var(--ink-500);font-weight:700;"></div>
+<div class="level-tabs">
+<button class="level-tab active" data-level="primary"><svg class="icon-svg" height="16" viewbox="0 0 24 24" width="16"><path d="M6 8a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1Z"></path><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"></path><path d="M9 12h6"></path><path d="M6 10H4v5h2"></path><path d="M18 10h2v5h-2"></path></svg> Primary · Class 1–5</button>
+<button class="level-tab" data-level="middle"><svg class="icon-svg" height="16" viewbox="0 0 24 24" width="16"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"></path></svg> Middle School · Class 6–8</button>
+<button class="level-tab" data-level="secondary"><svg class="icon-svg" height="16" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="10"></circle><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12Z"></path></svg> Secondary · Class 9–12</button>
+</div>
+<div class="row g-4">
+<!-- SIDEBAR -->
+<div class="col-lg-3">
+<div class="filter-box">
+<h5>Category</h5>
+<label><input aria-label="Filter Textbooks" data-category="textbooks" name="category" type="radio" value="textbooks"/> <svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"></path></svg> Textbooks</label>
+<label><input aria-label="Filter Notebooks" data-category="notebooks" name="category" type="radio" value="notebooks"/> <svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><path d="M6 2h13a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Z"></path><path d="M2 6h4M2 10h4M2 14h4M2 18h4"></path><path d="M9 2v20"></path></svg> Notebooks</label>
+<label><input aria-label="Filter Pens &amp; Pencils" data-category="pens-pencils" name="category" type="radio" value="pens-pencils"/> <svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path><path d="m15 5 4 4"></path></svg> Pens &amp; Pencils</label>
+<label><input aria-label="Filter Art Supplies" data-category="art-supplies" name="category" type="radio" value="art-supplies"/> <svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.9 0 1.6-.7 1.6-1.6 0-.4-.2-.8-.4-1.1-.3-.3-.4-.7-.4-1.1 0-.9.7-1.6 1.6-1.6H16c3.3 0 6-2.7 6-6 0-4.9-4.5-8.6-9.9-8.6Z"></path></svg> Art Supplies</label>
+<label><input aria-label="Filter Geometry Boxes" data-category="geometry" name="category" type="radio" value="geometry"/> <svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="12" cy="12" r="10"></circle><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12Z"></path></svg> Geometry Boxes</label>
+<label><input aria-label="Filter Bags &amp; Cases" data-category="bags-cases" name="category" type="radio" value="bags-cases"/> <svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><path d="M6 8a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1Z"></path><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"></path><path d="M9 12h6"></path><path d="M6 10H4v5h2"></path><path d="M18 10h2v5h-2"></path></svg> Bags &amp; Cases</label>
+<label><input checked="True" data-category="all" name="category" type="radio" value="all"/> All Products</label></div>
+<div class="filter-box">
+<h5>Price Range</h5>
+<label><input aria-label="Under ₹100" data-max="99" data-min="0" name="price" type="radio" value="0"/> Under ₹100</label>
+<label><input aria-label="₹100 – ₹500" data-max="500" data-min="100" name="price" type="radio" value="1"/> ₹100 – ₹500</label>
+<label><input aria-label="₹500 – ₹1,500" data-max="1500" data-min="501" name="price" type="radio" value="2"/> ₹500 – ₹1,500</label>
+<label><input aria-label="Above ₹1,500" data-max="" data-min="1501" name="price" type="radio" value="3"/> Above ₹1,500</label>
+</div>
+<div class="filter-box" style="background:var(--green-600);border-color:var(--green-600);">
+<h5 style="color:#fff;"><svg class="icon-svg" height="18" viewbox="0 0 24 24" width="18"><path d="m11 17 2 2a1 1 0 1 0 3-3"></path><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 8.06 0L23 9"></path><path d="m21 3 1 11h-2"></path><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"></path><path d="M3 4h8"></path></svg> Ordering for a class?</h5>
+<p style="color:#eaf7da;font-size:.85rem;">Send us the full booklist and get one consolidated bulk quote.</p>
+<a class="btn-brand" href="bulk-pricing.html" style="background:#fff;color:var(--green-700);border-color:#fff;width:100%;justify-content:center;">Get Bulk Quote</a>
+</div>
+</div>
+<!-- PRODUCT GRID -->
+<div class="col-lg-9">
+<div data-level-panel="primary" id="primary">
+<div class="prod-grid"><div class="prod-card" data-category="textbooks" data-price="980" data-product-id="ncert-class-1-full-subject-set">
+<div class="prod-badge">Bestseller</div>
+<button aria-label="Add to wishlist" class="prod-wish" data-wishlist-category="Textbooks" data-wishlist-id="ncert-class-1-full-subject-set" data-wishlist-name="NCERT Class 1 Full Subject Set" data-wishlist-price="980" title="Add to wishlist" type="button"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"></path></svg></button>
+<div class="prod-thumb"><img alt="NCERT Class 1 Full Subject Set" class="product-image" loading="lazy" src="assets/img/p-ncert-c1.jpg"/></div>
+<div class="prod-body">
+<div class="prod-cat">Textbooks</div>
+<div class="prod-name">NCERT Class 1 Full Subject Set</div>
+<div class="stars">★★★★★</div>
+<div class="prod-price-row">
+<span class="prod-price">₹980</span>
+<button aria-label="Add to cart" class="add-cart-btn" data-product-category="Textbooks" data-product-id="ncert-class-1-full-subject-set" data-product-name="NCERT Class 1 Full Subject Set" data-product-price="980"><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg></button>
+</div>
+</div>
+</div><div class="prod-card" data-category="textbooks" data-price="1120" data-product-id="ncert-class-3-full-subject-set">
+<button aria-label="Add to wishlist" class="prod-wish" data-wishlist-category="Textbooks" data-wishlist-id="ncert-class-3-full-subject-set" data-wishlist-name="NCERT Class 3 Full Subject Set" data-wishlist-price="1120" title="Add to wishlist" type="button"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"></path></svg></button>
+<div class="prod-thumb"><img alt="NCERT Class 3 Full Subject Set" class="product-image" loading="lazy" src="assets/img/p-ncert-c3.jpg"/></div>
+<div class="prod-body">
+<div class="prod-cat">Textbooks</div>
+<div class="prod-name">NCERT Class 3 Full Subject Set</div>
+<div class="stars">★★★★★</div>
+<div class="prod-price-row">
+<span class="prod-price">₹1120</span>
+<button aria-label="Add to cart" class="add-cart-btn" data-product-category="Textbooks" data-product-id="ncert-class-3-full-subject-set" data-product-name="NCERT Class 3 Full Subject Set" data-product-price="1120"><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg></button>
+</div>
+</div>
+</div><div class="prod-card" data-category="notebooks" data-price="210" data-product-id="four-line-notebook-pack-of-6">
+<button aria-label="Add to wishlist" class="prod-wish" data-wishlist-category="Notebooks" data-wishlist-id="four-line-notebook-pack-of-6" data-wishlist-name="Four-Line Notebook (Pack of 6)" data-wishlist-price="210" title="Add to wishlist" type="button"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"></path></svg></button>
+<div class="prod-thumb"><img alt="Four-Line Notebook (Pack of 6)" class="product-image" loading="lazy" src="assets/img/p-4line-notebook.jpg"/></div>
+<div class="prod-body">
+<div class="prod-cat">Notebooks</div>
+<div class="prod-name">Four-Line Notebook (Pack of 6)</div>
+<div class="stars">★★★★★</div>
+<div class="prod-price-row">
+<span class="prod-price">₹210</span>
+<button aria-label="Add to cart" class="add-cart-btn" data-product-category="Notebooks" data-product-id="four-line-notebook-pack-of-6" data-product-name="Four-Line Notebook (Pack of 6)" data-product-price="210"><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg></button>
+</div>
+</div>
+</div><div class="prod-card" data-category="notebooks" data-price="240" data-product-id="single-line-ruled-notebook-pack-of-6">
+<button aria-label="Add to wishlist" class="prod-wish" data-wishlist-category="Notebooks" data-wishlist-id="single-line-ruled-notebook-pack-of-6" data-wishlist-name="Single-Line Ruled Notebook (Pack of 6)" data-wishlist-price="240" title="Add to wishlist" type="button"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"></path></svg></button>
+<div class="prod-thumb"><img alt="Single-Line Ruled Notebook (Pack of 6)" class="product-image" loading="lazy" src="assets/img/p-single-line-notebook.jpg"/></div>
+<div class="prod-body">
+<div class="prod-cat">Notebooks</div>
+<div class="prod-name">Single-Line Ruled Notebook (Pack of 6)</div>
+<div class="stars">★★★★★</div>
+<div class="prod-price-row">
+<span class="prod-price">₹240</span>
+<button aria-label="Add to cart" class="add-cart-btn" data-product-category="Notebooks" data-product-id="single-line-ruled-notebook-pack-of-6" data-product-name="Single-Line Ruled Notebook (Pack of 6)" data-product-price="240"><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg></button>
+</div>
+</div>
+</div><div class="prod-card" data-category="pens-pencils" data-price="90" data-product-id="beginner-grip-pencils-box-of-10">
+<div class="prod-badge">New</div>
+<button aria-label="Add to wishlist" class="prod-wish" data-wishlist-category="Pens &amp; Pencils" data-wishlist-id="beginner-grip-pencils-box-of-10" data-wishlist-name="Beginner Grip Pencils (Box of 10)" data-wishlist-price="90" title="Add to wishlist" type="button"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"></path></svg></button>
+<div class="prod-thumb"><img alt="Beginner Grip Pencils (Box of 10)" class="product-image" loading="lazy" src="assets/img/p-grip-pencils.jpg"/></div>
+<div class="prod-body">
+<div class="prod-cat">Pens &amp; Pencils</div>
+<div class="prod-name">Beginner Grip Pencils (Box of 10)</div>
+<div class="stars">★★★★★</div>
+<div class="prod-price-row">
+<span class="prod-price">₹90</span>
+<button aria-label="Add to cart" class="add-cart-btn" data-product-category="Pens &amp; Pencils" data-product-id="beginner-grip-pencils-box-of-10" data-product-name="Beginner Grip Pencils (Box of 10)" data-product-price="90"><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg></button>
+</div>
+</div>
+</div><div class="prod-card" data-category="pens-pencils" data-price="60" data-product-id="jumbo-erasers-sharpener-combo">
+<button aria-label="Add to wishlist" class="prod-wish" data-wishlist-category="Pens &amp; Pencils" data-wishlist-id="jumbo-erasers-sharpener-combo" data-wishlist-name="Jumbo Erasers &amp; Sharpener Combo" data-wishlist-price="60" title="Add to wishlist" type="button"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"></path></svg></button>
+<div class="prod-thumb"><img alt="Jumbo Erasers &amp; Sharpener Combo" class="product-image" loading="lazy" src="assets/img/p-eraser-sharpener.jpg"/></div>
+<div class="prod-body">
+<div class="prod-cat">Pens &amp; Pencils</div>
+<div class="prod-name">Jumbo Erasers &amp; Sharpener Combo</div>
+<div class="stars">★★★★★</div>
+<div class="prod-price-row">
+<span class="prod-price">₹60</span>
+<button aria-label="Add to cart" class="add-cart-btn" data-product-category="Pens &amp; Pencils" data-product-id="jumbo-erasers-sharpener-combo" data-product-name="Jumbo Erasers &amp; Sharpener Combo" data-product-price="60"><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg></button>
+</div>
+</div>
+</div><div class="prod-card" data-category="art-supplies" data-price="75" data-product-id="12-shade-wax-crayons">
+<button aria-label="Add to wishlist" class="prod-wish" data-wishlist-category="Art Supplies" data-wishlist-id="12-shade-wax-crayons" data-wishlist-name="12-Shade Wax Crayons" data-wishlist-price="75" title="Add to wishlist" type="button"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"></path></svg></button>
+<div class="prod-thumb"><img alt="12-Shade Wax Crayons" class="product-image" loading="lazy" src="assets/img/p-wax-crayons.jpg"/></div>
+<div class="prod-body">
+<div class="prod-cat">Art Supplies</div>
+<div class="prod-name">12-Shade Wax Crayons</div>
+<div class="stars">★★★★★</div>
+<div class="prod-price-row">
+<span class="prod-price">₹75</span>
+<button aria-label="Add to cart" class="add-cart-btn" data-product-category="Art Supplies" data-product-id="12-shade-wax-crayons" data-product-name="12-Shade Wax Crayons" data-product-price="75"><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg></button>
+</div>
+</div>
+</div><div class="prod-card" data-category="bags-cases" data-price="899" data-product-id="primary-school-backpack-15l">
+<button aria-label="Add to wishlist" class="prod-wish" data-wishlist-category="Bags &amp; Cases" data-wishlist-id="primary-school-backpack-15l" data-wishlist-name="Primary School Backpack, 15L" data-wishlist-price="899" title="Add to wishlist" type="button"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"></path></svg></button>
+<div class="prod-thumb"><img alt="Primary School Backpack, 15L" class="product-image" loading="lazy" src="assets/img/p-primary-backpack.jpg"/></div>
+<div class="prod-body">
+<div class="prod-cat">Bags &amp; Cases</div>
+<div class="prod-name">Primary School Backpack, 15L</div>
+<div class="stars">★★★★★</div>
+<div class="prod-price-row">
+<span class="prod-price">₹899<del>₹1099</del></span>
+<button aria-label="Add to cart" class="add-cart-btn" data-product-category="Bags &amp; Cases" data-product-id="primary-school-backpack-15l" data-product-name="Primary School Backpack, 15L" data-product-price="899"><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg></button>
+</div>
+</div>
+</div></div>
+</div>
+<div data-level-panel="middle" id="middle">
+<div class="prod-grid"><div class="prod-card" data-category="textbooks" data-price="1340" data-product-id="ncert-class-7-full-subject-set">
+<div class="prod-badge">Bestseller</div>
+<button aria-label="Add to wishlist" class="prod-wish" data-wishlist-category="Textbooks" data-wishlist-id="ncert-class-7-full-subject-set" data-wishlist-name="NCERT Class 7 Full Subject Set" data-wishlist-price="1340" title="Add to wishlist" type="button"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"></path></svg></button>
+<div class="prod-thumb"><img alt="NCERT Class 7 Full Subject Set" class="product-image" loading="lazy" src="assets/img/p-ncert-c7.jpg"/></div>
+<div class="prod-body">
+<div class="prod-cat">Textbooks</div>
+<div class="prod-name">NCERT Class 7 Full Subject Set</div>
+<div class="stars">★★★★★</div>
+<div class="prod-price-row">
+<span class="prod-price">₹1340</span>
+<button aria-label="Add to cart" class="add-cart-btn" data-product-category="Textbooks" data-product-id="ncert-class-7-full-subject-set" data-product-name="NCERT Class 7 Full Subject Set" data-product-price="1340"><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg></button>
+</div>
+</div>
+</div><div class="prod-card" data-category="textbooks" data-price="1420" data-product-id="ncert-class-8-full-subject-set">
+<button aria-label="Add to wishlist" class="prod-wish" data-wishlist-category="Textbooks" data-wishlist-id="ncert-class-8-full-subject-set" data-wishlist-name="NCERT Class 8 Full Subject Set" data-wishlist-price="1420" title="Add to wishlist" type="button"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"></path></svg></button>
+<div class="prod-thumb"><img alt="NCERT Class 8 Full Subject Set" class="product-image" loading="lazy" src="assets/img/p-ncert-c8.jpg"/></div>
+<div class="prod-body">
+<div class="prod-cat">Textbooks</div>
+<div class="prod-name">NCERT Class 8 Full Subject Set</div>
+<div class="stars">★★★★★</div>
+<div class="prod-price-row">
+<span class="prod-price">₹1420</span>
+<button aria-label="Add to cart" class="add-cart-btn" data-product-category="Textbooks" data-product-id="ncert-class-8-full-subject-set" data-product-name="NCERT Class 8 Full Subject Set" data-product-price="1420"><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg></button>
+</div>
+</div>
+</div><div class="prod-card" data-category="notebooks" data-price="300" data-product-id="long-notebook-172-pages-pack-of-6">
+<button aria-label="Add to wishlist" class="prod-wish" data-wishlist-category="Notebooks" data-wishlist-id="long-notebook-172-pages-pack-of-6" data-wishlist-name="Long Notebook, 172 Pages (Pack of 6)" data-wishlist-price="300" title="Add to wishlist" type="button"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"></path></svg></button>
+<div class="prod-thumb"><img alt="Long Notebook, 172 Pages (Pack of 6)" class="product-image" loading="lazy" src="assets/img/p-long-notebook.jpg"/></div>
+<div class="prod-body">
+<div class="prod-cat">Notebooks</div>
+<div class="prod-name">Long Notebook, 172 Pages (Pack of 6)</div>
+<div class="stars">★★★★★</div>
+<div class="prod-price-row">
+<span class="prod-price">₹300</span>
+<button aria-label="Add to cart" class="add-cart-btn" data-product-category="Notebooks" data-product-id="long-notebook-172-pages-pack-of-6" data-product-name="Long Notebook, 172 Pages (Pack of 6)" data-product-price="300"><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg></button>
+</div>
+</div>
+</div><div class="prod-card" data-category="notebooks" data-price="95" data-product-id="graph-notebook-4mm-square">
+<button aria-label="Add to wishlist" class="prod-wish" data-wishlist-category="Notebooks" data-wishlist-id="graph-notebook-4mm-square" data-wishlist-name="Graph Notebook, 4mm Square" data-wishlist-price="95" title="Add to wishlist" type="button"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"></path></svg></button>
+<div class="prod-thumb"><img alt="Graph Notebook, 4mm Square" class="product-image" loading="lazy" src="assets/img/p-graph-notebook.jpg"/></div>
+<div class="prod-body">
+<div class="prod-cat">Notebooks</div>
+<div class="prod-name">Graph Notebook, 4mm Square</div>
+<div class="stars">★★★★★</div>
+<div class="prod-price-row">
+<span class="prod-price">₹95</span>
+<button aria-label="Add to cart" class="add-cart-btn" data-product-category="Notebooks" data-product-id="graph-notebook-4mm-square" data-product-name="Graph Notebook, 4mm Square" data-product-price="95"><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg></button>
+</div>
+</div>
+</div><div class="prod-card" data-category="geometry" data-price="140" data-product-id="standard-geometry-box-9-piece">
+<button aria-label="Add to wishlist" class="prod-wish" data-wishlist-category="Geometry" data-wishlist-id="standard-geometry-box-9-piece" data-wishlist-name="Standard Geometry Box, 9-piece" data-wishlist-price="140" title="Add to wishlist" type="button"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"></path></svg></button>
+<div class="prod-thumb"><img alt="Standard Geometry Box, 9-piece" class="product-image" loading="lazy" src="assets/img/p-geometry-standard.jpg"/></div>
+<div class="prod-body">
+<div class="prod-cat">Geometry</div>
+<div class="prod-name">Standard Geometry Box, 9-piece</div>
+<div class="stars">★★★★★</div>
+<div class="prod-price-row">
+<span class="prod-price">₹140</span>
+<button aria-label="Add to cart" class="add-cart-btn" data-product-category="Geometry" data-product-id="standard-geometry-box-9-piece" data-product-name="Standard Geometry Box, 9-piece" data-product-price="140"><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg></button>
+</div>
+</div>
+</div><div class="prod-card" data-category="pens-pencils" data-price="180" data-product-id="gel-pen-set-10-colours">
+<div class="prod-badge">New</div>
+<button aria-label="Add to wishlist" class="prod-wish" data-wishlist-category="Pens &amp; Pencils" data-wishlist-id="gel-pen-set-10-colours" data-wishlist-name="Gel Pen Set, 10 Colours" data-wishlist-price="180" title="Add to wishlist" type="button"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"></path></svg></button>
+<div class="prod-thumb"><img alt="Gel Pen Set, 10 Colours" class="product-image" loading="lazy" src="assets/img/p-gel-pens.jpg"/></div>
+<div class="prod-body">
+<div class="prod-cat">Pens &amp; Pencils</div>
+<div class="prod-name">Gel Pen Set, 10 Colours</div>
+<div class="stars">★★★★★</div>
+<div class="prod-price-row">
+<span class="prod-price">₹180</span>
+<button aria-label="Add to cart" class="add-cart-btn" data-product-category="Pens &amp; Pencils" data-product-id="gel-pen-set-10-colours" data-product-name="Gel Pen Set, 10 Colours" data-product-price="180"><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg></button>
+</div>
+</div>
+</div><div class="prod-card" data-category="art-supplies" data-price="160" data-product-id="poster-colour-set-12-shades">
+<button aria-label="Add to wishlist" class="prod-wish" data-wishlist-category="Art Supplies" data-wishlist-id="poster-colour-set-12-shades" data-wishlist-name="Poster Colour Set, 12 Shades" data-wishlist-price="160" title="Add to wishlist" type="button"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"></path></svg></button>
+<div class="prod-thumb"><img alt="Poster Colour Set, 12 Shades" class="product-image" loading="lazy" src="assets/img/p-poster-colour.jpg"/></div>
+<div class="prod-body">
+<div class="prod-cat">Art Supplies</div>
+<div class="prod-name">Poster Colour Set, 12 Shades</div>
+<div class="stars">★★★★★</div>
+<div class="prod-price-row">
+<span class="prod-price">₹160</span>
+<button aria-label="Add to cart" class="add-cart-btn" data-product-category="Art Supplies" data-product-id="poster-colour-set-12-shades" data-product-name="Poster Colour Set, 12 Shades" data-product-price="160"><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg></button>
+</div>
+</div>
+</div><div class="prod-card" data-category="bags-cases" data-price="199" data-product-id="pencil-pouch-water-resistant">
+<button aria-label="Add to wishlist" class="prod-wish" data-wishlist-category="Bags &amp; Cases" data-wishlist-id="pencil-pouch-water-resistant" data-wishlist-name="Pencil Pouch, Water-Resistant" data-wishlist-price="199" title="Add to wishlist" type="button"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"></path></svg></button>
+<div class="prod-thumb"><img alt="Pencil Pouch, Water-Resistant" class="product-image" loading="lazy" src="assets/img/p-pencil-pouch.jpg"/></div>
+<div class="prod-body">
+<div class="prod-cat">Bags &amp; Cases</div>
+<div class="prod-name">Pencil Pouch, Water-Resistant</div>
+<div class="stars">★★★★★</div>
+<div class="prod-price-row">
+<span class="prod-price">₹199</span>
+<button aria-label="Add to cart" class="add-cart-btn" data-product-category="Bags &amp; Cases" data-product-id="pencil-pouch-water-resistant" data-product-name="Pencil Pouch, Water-Resistant" data-product-price="199"><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg></button>
+</div>
+</div>
+</div></div>
+</div>
+<div data-level-panel="secondary" id="secondary">
+<div class="prod-grid"><div class="prod-card" data-category="textbooks" data-price="1680" data-product-id="ncert-class-10-board-set-all-subjects">
+<div class="prod-badge">Bestseller</div>
+<button aria-label="Add to wishlist" class="prod-wish" data-wishlist-category="Textbooks" data-wishlist-id="ncert-class-10-board-set-all-subjects" data-wishlist-name="NCERT Class 10 Board Set (All Subjects)" data-wishlist-price="1680" title="Add to wishlist" type="button"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"></path></svg></button>
+<div class="prod-thumb"><img alt="NCERT Class 10 Board Set (All Subjects)" class="product-image" loading="lazy" src="assets/img/p-ncert-c10.jpg"/></div>
+<div class="prod-body">
+<div class="prod-cat">Textbooks</div>
+<div class="prod-name">NCERT Class 10 Board Set (All Subjects)</div>
+<div class="stars">★★★★★</div>
+<div class="prod-price-row">
+<span class="prod-price">₹1680</span>
+<button aria-label="Add to cart" class="add-cart-btn" data-product-category="Textbooks" data-product-id="ncert-class-10-board-set-all-subjects" data-product-name="NCERT Class 10 Board Set (All Subjects)" data-product-price="1680"><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg></button>
+</div>
+</div>
+</div><div class="prod-card" data-category="textbooks" data-price="2450" data-product-id="ncert-class-12-science-stream-set">
+<button aria-label="Add to wishlist" class="prod-wish" data-wishlist-category="Textbooks" data-wishlist-id="ncert-class-12-science-stream-set" data-wishlist-name="NCERT Class 12 Science Stream Set" data-wishlist-price="2450" title="Add to wishlist" type="button"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"></path></svg></button>
+<div class="prod-thumb"><img alt="NCERT Class 12 Science Stream Set" class="product-image" loading="lazy" src="assets/img/p-ncert-c12.jpg"/></div>
+<div class="prod-body">
+<div class="prod-cat">Textbooks</div>
+<div class="prod-name">NCERT Class 12 Science Stream Set</div>
+<div class="stars">★★★★★</div>
+<div class="prod-price-row">
+<span class="prod-price">₹2450</span>
+<button aria-label="Add to cart" class="add-cart-btn" data-product-category="Textbooks" data-product-id="ncert-class-12-science-stream-set" data-product-name="NCERT Class 12 Science Stream Set" data-product-price="2450"><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg></button>
+</div>
+</div>
+</div><div class="prod-card" data-category="notebooks" data-price="120" data-product-id="practical-record-notebook-100pg">
+<button aria-label="Add to wishlist" class="prod-wish" data-wishlist-category="Notebooks" data-wishlist-id="practical-record-notebook-100pg" data-wishlist-name="Practical Record Notebook, 100pg" data-wishlist-price="120" title="Add to wishlist" type="button"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"></path></svg></button>
+<div class="prod-thumb"><img alt="Practical Record Notebook, 100pg" class="product-image" loading="lazy" src="assets/img/p-record-notebook.jpg"/></div>
+<div class="prod-body">
+<div class="prod-cat">Notebooks</div>
+<div class="prod-name">Practical Record Notebook, 100pg</div>
+<div class="stars">★★★★★</div>
+<div class="prod-price-row">
+<span class="prod-price">₹120</span>
+<button aria-label="Add to cart" class="add-cart-btn" data-product-category="Notebooks" data-product-id="practical-record-notebook-100pg" data-product-name="Practical Record Notebook, 100pg" data-product-price="120"><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg></button>
+</div>
+</div>
+</div><div class="prod-card" data-category="geometry" data-price="420" data-product-id="technical-drafting-set-metal-14-piece">
+<div class="prod-badge">New</div>
+<button aria-label="Add to wishlist" class="prod-wish" data-wishlist-category="Geometry" data-wishlist-id="technical-drafting-set-metal-14-piece" data-wishlist-name="Technical Drafting Set, Metal, 14-piece" data-wishlist-price="420" title="Add to wishlist" type="button"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"></path></svg></button>
+<div class="prod-thumb"><img alt="Technical Drafting Set, Metal, 14-piece" class="product-image" loading="lazy" src="assets/img/p-drafting-set.jpg"/></div>
+<div class="prod-body">
+<div class="prod-cat">Geometry</div>
+<div class="prod-name">Technical Drafting Set, Metal, 14-piece</div>
+<div class="stars">★★★★★</div>
+<div class="prod-price-row">
+<span class="prod-price">₹420</span>
+<button aria-label="Add to cart" class="add-cart-btn" data-product-category="Geometry" data-product-id="technical-drafting-set-metal-14-piece" data-product-name="Technical Drafting Set, Metal, 14-piece" data-product-price="420"><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg></button>
+</div>
+</div>
+</div><div class="prod-card" data-category="pens-pencils" data-price="110" data-product-id="ball-pen-set-pack-of-10">
+<button aria-label="Add to wishlist" class="prod-wish" data-wishlist-category="Pens &amp; Pencils" data-wishlist-id="ball-pen-set-pack-of-10" data-wishlist-name="Ball Pen Set, Pack of 10" data-wishlist-price="110" title="Add to wishlist" type="button"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"></path></svg></button>
+<div class="prod-thumb"><img alt="Ball Pen Set, Pack of 10" class="product-image" loading="lazy" src="assets/img/p-ball-pens.jpg"/></div>
+<div class="prod-body">
+<div class="prod-cat">Pens &amp; Pencils</div>
+<div class="prod-name">Ball Pen Set, Pack of 10</div>
+<div class="stars">★★★★★</div>
+<div class="prod-price-row">
+<span class="prod-price">₹110</span>
+<button aria-label="Add to cart" class="add-cart-btn" data-product-category="Pens &amp; Pencils" data-product-id="ball-pen-set-pack-of-10" data-product-name="Ball Pen Set, Pack of 10" data-product-price="110"><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg></button>
+</div>
+</div>
+</div><div class="prod-card" data-category="notebooks" data-price="150" data-product-id="graph-log-notebook-combo">
+<button aria-label="Add to wishlist" class="prod-wish" data-wishlist-category="Notebooks" data-wishlist-id="graph-log-notebook-combo" data-wishlist-name="Graph &amp; Log Notebook Combo" data-wishlist-price="150" title="Add to wishlist" type="button"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"></path></svg></button>
+<div class="prod-thumb"><img alt="Graph &amp; Log Notebook Combo" class="product-image" loading="lazy" src="assets/img/p-graph-log-combo.jpg"/></div>
+<div class="prod-body">
+<div class="prod-cat">Notebooks</div>
+<div class="prod-name">Graph &amp; Log Notebook Combo</div>
+<div class="stars">★★★★★</div>
+<div class="prod-price-row">
+<span class="prod-price">₹150</span>
+<button aria-label="Add to cart" class="add-cart-btn" data-product-category="Notebooks" data-product-id="graph-log-notebook-combo" data-product-name="Graph &amp; Log Notebook Combo" data-product-price="150"><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg></button>
+</div>
+</div>
+</div><div class="prod-card" data-category="textbooks" data-price="380" data-product-id="reference-guide-board-exam-series">
+<button aria-label="Add to wishlist" class="prod-wish" data-wishlist-category="Textbooks" data-wishlist-id="reference-guide-board-exam-series" data-wishlist-name="Reference Guide — Board Exam Series" data-wishlist-price="380" title="Add to wishlist" type="button"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"></path></svg></button>
+<div class="prod-thumb"><img alt="Reference Guide — Board Exam Series" class="product-image" loading="lazy" src="assets/img/p-reference-guide.jpg"/></div>
+<div class="prod-body">
+<div class="prod-cat">Textbooks</div>
+<div class="prod-name">Reference Guide — Board Exam Series</div>
+<div class="stars">★★★★★</div>
+<div class="prod-price-row">
+<span class="prod-price">₹380</span>
+<button aria-label="Add to cart" class="add-cart-btn" data-product-category="Textbooks" data-product-id="reference-guide-board-exam-series" data-product-name="Reference Guide — Board Exam Series" data-product-price="380"><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg></button>
+</div>
+</div>
+</div><div class="prod-card" data-category="bags-cases" data-price="1499" data-product-id="senior-school-laptop-backpack-28l">
+<button aria-label="Add to wishlist" class="prod-wish" data-wishlist-category="Bags &amp; Cases" data-wishlist-id="senior-school-laptop-backpack-28l" data-wishlist-name="Senior School Laptop Backpack, 28L" data-wishlist-price="1499" title="Add to wishlist" type="button"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"></path></svg></button>
+<div class="prod-thumb"><img alt="Senior School Laptop Backpack, 28L" class="product-image" loading="lazy" src="assets/img/p-senior-backpack.jpg"/></div>
+<div class="prod-body">
+<div class="prod-cat">Bags &amp; Cases</div>
+<div class="prod-name">Senior School Laptop Backpack, 28L</div>
+<div class="stars">★★★★★</div>
+<div class="prod-price-row">
+<span class="prod-price">₹1499<del>₹1799</del></span>
+<button aria-label="Add to cart" class="add-cart-btn" data-product-category="Bags &amp; Cases" data-product-id="senior-school-laptop-backpack-28l" data-product-name="Senior School Laptop Backpack, 28L" data-product-price="1499"><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg></button>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- UNIQUE PRODUCTS CONTENT SECTIONS -->
+<style>
+.products-extra{padding:72px 0;background:var(--cream-50,#fff8f2)}
+.products-extra.alt{background:#fff}
+.products-extra .extra-head{max-width:760px;margin:0 auto 38px;text-align:center}
+.products-extra .extra-head h2{margin:8px 0 12px}
+.products-extra .extra-head p{color:var(--ink-500);margin:0}
+.product-journey{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid #f0d8ca;border-radius:24px;overflow:hidden;background:#fff}
+.product-journey .journey-step{padding:28px 24px;position:relative;border-right:1px solid #f0d8ca}
+.product-journey .journey-step:last-child{border-right:0}
+.journey-no{font-size:.8rem;font-weight:800;color:var(--brand-600,#ff633d);letter-spacing:.08em}
+.journey-step h3{font-size:1.05rem;margin:14px 0 8px}.journey-step p{color:var(--ink-500);font-size:.9rem;line-height:1.65;margin:0}
+.product-guide{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+.product-guide-media{height:390px;border-radius:28px;overflow:hidden;box-shadow:0 18px 45px rgba(47,29,22,.10)}
+.product-guide-media img{width:100%;height:100%;object-fit:cover}
+.guide-list{display:grid;gap:14px;margin-top:24px}.guide-item{display:flex;gap:15px;align-items:flex-start;padding:16px 18px;border:1px solid #f1ddd3;border-radius:16px;background:#fff}
+.guide-icon{width:36px;height:36px;flex:0 0 36px;border-radius:11px;background:#fff0e9;color:var(--brand-600,#ff633d);display:grid;place-items:center;font-weight:800}.guide-item strong{display:block;margin-bottom:4px}.guide-item span{font-size:.88rem;color:var(--ink-500);line-height:1.5}
+.school-kit{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.kit-card{padding:28px;border-radius:22px;background:#fff;border:1px solid #f0ddd4;min-height:205px}.kit-card.featured{background:#fff;color:var(--ink-900);border:1px solid #f0ddd4;box-shadow:0 18px 40px -20px rgba(47,29,22,.18);transform:none}.kit-tag{font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--brand-600,#ff633d)}.featured .kit-tag{color:var(--brand-600,#ff633d)}.kit-card h3{margin:12px 0 9px}.kit-card p{font-size:.9rem;line-height:1.6;color:var(--ink-500);margin:0 0 18px}.featured p{color:var(--ink-500)}.kit-link{font-weight:800;color:var(--brand-600,#ff633d)}
+.list-builder{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:stretch}.builder-copy{padding:38px;border-radius:24px;background:#fff;border:1px solid #f0ddd4;color:var(--ink-900)}.builder-copy h2{margin:8px 0 14px}.builder-copy p{color:var(--ink-500);line-height:1.7}.builder-points{display:grid;gap:10px;margin-top:24px}.builder-point{display:flex;gap:10px;align-items:center;font-weight:700}.check{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#ff633d;color:#fff;font-size:.75rem}.builder-panel{border:1px solid #efd9ce;border-radius:24px;background:#fff;padding:28px}.builder-panel h3{margin:0 0 18px}.build-row{display:flex;align-items:center;justify-content:space-between;padding:15px 0;border-bottom:1px solid #f0e3dd}.build-row:last-child{border-bottom:0}.build-row span:first-child{font-weight:700}.build-pill{font-size:.75rem;font-weight:800;padding:7px 10px;border-radius:999px;background:#fff0e9;color:var(--brand-600,#ff633d)}
+@media(max-width:900px){.product-journey{grid-template-columns:1fr 1fr}.product-journey .journey-step:nth-child(2){border-right:0}.product-journey .journey-step:nth-child(-n+2){border-bottom:1px solid #f0d8ca}.product-guide,.list-builder{grid-template-columns:1fr}.school-kit{grid-template-columns:1fr}.kit-card.featured{transform:none}}
+@media(max-width:600px){.products-extra{padding:52px 0}.product-journey{grid-template-columns:1fr}.product-journey .journey-step{border-right:0!important;border-bottom:1px solid #f0d8ca!important}.product-journey .journey-step:last-child{border-bottom:0!important}.product-guide-media{height:280px}.builder-copy,.builder-panel{padding:24px}}
+
+/* Product page unique sections: clarity + dark-mode polish */
+.products-extra{color:var(--ink-900);}
+.products-extra .extra-head h2,.product-guide h2,.kit-card h3,.builder-panel h3,.journey-step h3,.guide-item strong,.build-row span:first-child{color:var(--ink-900);}
+.products-extra .extra-head p,.product-guide>div>p:not(.eyebrow),.journey-step p,.guide-item span,.kit-card p,.builder-panel .build-row{color:var(--ink-500);}
+.product-guide-media img{image-rendering:auto;object-position:center;filter:none;}
+.products-extra.alt{background:var(--white,#fff);}
+.product-journey,.guide-item,.kit-card,.builder-panel{color:var(--ink-900);}
+
+body.dark-mode .products-extra{background:#18120f;}
+body.dark-mode .products-extra.alt{background:#15110f;}
+body.dark-mode .products-extra .extra-head h2,
+body.dark-mode .product-guide h2,
+body.dark-mode .kit-card h3,
+body.dark-mode .builder-panel h3,
+body.dark-mode .journey-step h3,
+body.dark-mode .guide-item strong,
+body.dark-mode .build-row span:first-child{color:#f7f0ed !important;}
+body.dark-mode .products-extra .extra-head p,
+body.dark-mode .product-guide>div>p:not(.eyebrow),
+body.dark-mode .journey-step p,
+body.dark-mode .guide-item span,
+body.dark-mode .kit-card p,
+body.dark-mode .builder-panel .build-row{color:#cfc2bc !important;}
+body.dark-mode .product-journey{background:#211814;border-color:#46352f;}
+body.dark-mode .product-journey .journey-step{border-color:#46352f;}
+body.dark-mode .guide-item,body.dark-mode .kit-card,body.dark-mode .builder-panel{background:#211814;border-color:#46352f;}
+body.dark-mode .guide-icon,body.dark-mode .build-pill{background:#35241e;color:#ff9b7c;}
+body.dark-mode .kit-card.featured,body.dark-mode .builder-copy{background:#2a1a15;border-color:#2a1a15;}
+body.dark-mode .builder-copy p{color:#d9cbc4 !important;}
+body.dark-mode .build-row{border-color:#46352f;}
+@media(max-width:600px){.product-guide-media{height:280px;}.product-guide-media img{object-position:center;}}
+</style>
+<section class="products-extra">
+<div class="container-xl">
+<div class="extra-head">
+<p class="eyebrow" style="justify-content:center;">HOW TO SHOP</p>
+<h2>From school list to doorstep, without the guesswork</h2>
+<p>Every product is organised around the way families and schools actually prepare for a new term.</p>
+</div>
+<div class="product-journey">
+<div class="journey-step"><span class="journey-no">01 / FIND</span><h3>Pick the class</h3><p>Start with Primary, Middle or Secondary and see products relevant to that stage.</p></div>
+<div class="journey-step"><span class="journey-no">02 / CHECK</span><h3>Match the list</h3><p>Compare notebooks, textbooks and essentials with the requirements you already have.</p></div>
+<div class="journey-step"><span class="journey-no">03 / BUILD</span><h3>Add what is missing</h3><p>Complete the everyday items that are easy to forget before the first school day.</p></div>
+<div class="journey-step"><span class="journey-no">04 / READY</span><h3>Order with confidence</h3><p>Review your basket and choose regular delivery or a bulk option for larger quantities.</p></div>
+</div>
+</div>
+</section>
+<section class="products-extra alt">
+<div class="container-xl product-guide">
+<div class="product-guide-media"><img alt="Open spiral notebook with pen, ready for everyday writing" loading="lazy" src="assets/products/notebook-guide-hd.jpg"/></div>
+<div>
+<p class="eyebrow">THE RIGHT NOTEBOOK MATTERS</p>
+<h2>Choose stationery that fits the way students learn</h2>
+<p style="color:var(--ink-500);line-height:1.7;">Different subjects need different formats. We make it easier to build a practical notebook set instead of buying whatever looks similar.</p>
+<div class="guide-list">
+<div class="guide-item"><div class="guide-icon">A</div><div><strong>Everyday writing</strong><span>Ruled notebooks for class notes, homework and daily practice.</span></div></div>
+<div class="guide-item"><div class="guide-icon">#</div><div><strong>Math &amp; diagrams</strong><span>Graph and squared formats for calculations, charts and geometry work.</span></div></div>
+<div class="guide-item"><div class="guide-icon">✦</div><div><strong>Projects &amp; creativity</strong><span>Drawing, craft and activity-friendly supplies for hands-on assignments.</span></div></div>
+</div>
+</div>
+</div>
+</section>
+<section class="products-extra">
+<div class="container-xl">
+<div class="extra-head">
+<p class="eyebrow" style="justify-content:center;">BUILT FOR THE SCHOOL DAY</p>
+<h2>Three ways to make the list feel lighter</h2>
+<p>Whether you are preparing one child or an entire classroom, there is a simpler way to shop.</p>
+</div>
+<div class="school-kit">
+<div class="kit-card"><span class="kit-tag">FOR FAMILIES</span><h3>Term-ready essentials</h3><p>Cover the basics first — writing tools, notebooks, geometry and school bags — then add subject-specific items.</p><a class="kit-link" href="#">Build a family list →</a></div>
+<div class="kit-card featured"><span class="kit-tag">FOR STUDENTS</span><h3>Study-day setup</h3><p>Keep a focused set of notebooks, pens and subject tools together so the school bag stays practical.</p><a class="kit-link" href="#">Explore student picks →</a></div>
+<div class="kit-card"><span class="kit-tag">FOR SCHOOLS</span><h3>Classroom supply run</h3><p>Combine recurring stationery with larger quantities and move the whole requirement into one organised order.</p><a class="kit-link" href="bulk-pricing.html">Plan a school order →</a></div>
+</div>
+</div>
+</section>
+<section class="products-extra alt">
+<div class="container-xl list-builder">
+<div class="builder-copy">
+<p class="eyebrow" style="color:var(--brand-600,#ff633d);">SMART LIST BUILDING</p>
+<h2>Forgot something? Start with the essentials.</h2>
+<p>Use this quick checklist before you place an order. It is designed around the items students reach for most often during a normal school week.</p>
+<div class="builder-points"><div class="builder-point"><span class="check">✓</span> Writing &amp; correction tools</div><div class="builder-point"><span class="check">✓</span> Subject notebooks</div><div class="builder-point"><span class="check">✓</span> Geometry &amp; drawing tools</div><div class="builder-point"><span class="check">✓</span> School bag &amp; daily carry</div></div>
+</div>
+<div class="builder-panel">
+<h3>Quick school-list check</h3>
+<div class="build-row"><span>Notebooks</span><span class="build-pill">Daily use</span></div>
+<div class="build-row"><span>Pens &amp; pencils</span><span class="build-pill">Always needed</span></div>
+<div class="build-row"><span>Geometry set</span><span class="build-pill">Math ready</span></div>
+<div class="build-row"><span>Art supplies</span><span class="build-pill">Projects</span></div>
+<div class="build-row"><span>Textbooks</span><span class="build-pill">Class level</span></div>
+</div>
+</div>
+</section>
+<!-- BULK CTA BAND -->
+<section class="editorial-flow alt">
+<div class="container-xl editorial-grid">
+<div>
+<p class="editorial-kicker">How to choose</p>
+<h2>Start with the school requirement, not the product aisle.</h2>
+</div>
+<div class="editorial-copy">
+<p>Use the class level and school specification first. Then choose the right size, format or pack quantity. It keeps a shopping list focused on what will actually be accepted and used.</p>
+<div class="editorial-rule"></div>
+<p>For classrooms and institutions, send the requirement as one list and we can align the assortment before you place the order.</p>
+<p class="editorial-note">The goal is a correct list, not a longer cart.</p>
+</div>
+</div>
+</section><section class="band">
+<div class="container-xl text-center" style="padding:56px 0;">
+<p class="eyebrow" style="justify-content:center;"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg> Buying more than 10 of anything?</p>
+<h2>Unlock automatic bulk discounts</h2>
+<p style="max-width:520px;margin:0 auto 22px;">Tiered pricing kicks in from 10 units — no separate negotiation needed.</p>
+<a class="btn-brand" href="bulk-pricing.html">View Bulk Pricing Tiers <svg class="icon-svg" height="16" viewbox="0 0 24 24" width="16"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+</div>
+</section>
+
+<footer>
+<div class="container-xl">
+<div class="footer-grid">
+<div class="footer-brand">
+<a class="brand" href="index.html" style="margin-bottom:14px;"><img alt="Chalk &amp; Cover logo" class="brand-logo" height="36" src="assets/img/logo.svg" width="36"/>
+<span class="brand-word" style="color:#fff;">Chalk &amp; Cover</span>
+</a>
+<p>Your neighbourhood school stationery &amp; textbook supplier — booklists sorted, bulk pricing built in, for parents and school offices alike.</p>
+<div class="social-row">
+<a aria-label="Facebook" href="https://facebook.com/chalkandcover" rel="noopener noreferrer" target="_blank"><svg class="icon-svg" height="16" viewbox="0 0 24 24" width="16"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"></path></svg></a>
+<a aria-label="Instagram" href="https://instagram.com/chalkandcover" rel="noopener noreferrer" target="_blank"><svg class="icon-svg" height="16" viewbox="0 0 24 24" width="16"><rect height="20" rx="5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a>
+<a aria-label="WhatsApp" href="https://wa.me/919876543210" rel="noopener noreferrer" target="_blank"><svg class="icon-svg" height="16" viewbox="0 0 24 24" width="16"><path d="M17.6 6.3A9 9 0 0 0 3.9 17.7L3 21l3.4-.9A9 9 0 1 0 17.6 6.3Z"></path><path d="M8.5 8.9c.2-.5.4-.5.6-.5h.5c.2 0 .4 0 .5.4.2.5.6 1.6.6 1.7.1.1.1.3 0 .4-.1.2-.1.3-.3.4-.1.2-.3.3-.4.5-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1.2-.2.7-.8.9-1.1.2-.2.4-.2.6-.1.2.1 1.5.7 1.7.8.2.1.4.2.4.3.1.4.1.8-.1 1.2-.2.4-1.1 1-1.9 1.1-.5.1-1.2.1-3.7-1-3-1.3-4.9-4.4-5.1-4.6-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4Z"></path></svg></a>
+</div>
+</div>
+<div>
+<h5>Explore</h5>
+<ul>
+<li><a href="products.html">All Products</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="school-tieups.html">School Tie-Ups</a></li>
+<li><a href="bulk-pricing.html">Bulk Pricing</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h5>Class Levels</h5>
+<ul>
+<li><a href="products.html#primary">Primary (1–5)</a></li>
+<li><a href="products.html#middle">Middle School (6–8)</a></li>
+<li><a href="products.html#secondary">Secondary (9–12)</a></li>
+<li><a href="bulk-pricing.html">Bulk &amp; Tie-Up Rates</a></li>
+</ul>
+</div>
+<div>
+<h5>Contact</h5>
+<ul>
+<li><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg> 12 Market Street, Coimbatore</li>
+<li><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92Z"></path></svg> +91 98765 43210</li>
+<li><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 6-10 7L2 6"></path></svg> orders@chalkandcover.in</li>
+<li><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg> Mon–Sat, 9am–8pm</li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Chalk &amp; Cover Stationery. All rights reserved.</span>
+<span>Designed for busy parents &amp; school offices.</span>
+</div>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+// Newsletter signup handling
+(function(){
+  const form = document.getElementById('ccNewsletterForm');
+  const success = document.getElementById('ccNewsletterSuccess');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      form.style.display = 'none';
+      if (success) success.style.display = 'block';
+    });
+  }
+})();
+</script>
+</body>
+</html>

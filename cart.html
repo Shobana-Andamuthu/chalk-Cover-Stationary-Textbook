@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Your Cart | Chalk &amp; Cover</title>
+<meta content="Review your Chalk &amp; Cover school stationery and textbook cart." name="description"/>
+<link href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%23FF6B3D%22/&gt;&lt;text x=%2250%22 y=%2266%22 font-size=%2250%22 font-family=%22sans-serif%22 fill=%22white%22 text-anchor=%22middle%22&gt;C&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+</head>
+<body class="font-body">
+<header class="site-navbar"><nav class="container-xl">
+<a class="brand" href="index.html"><img alt="Chalk &amp; Cover logo" class="brand-logo" height="36" src="assets/img/logo.svg" width="36"/><span class="brand-word">Chalk &amp; Cover<small>Stationery &amp; Textbooks</small></span></a>
+<ul class="nav-links"><li class="nav-home-item"><a class="nav-home-link nav-home-trigger" href="index.html" aria-haspopup="true">Home <svg class="icon-svg dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" style="margin-left:3px; display:inline-block; vertical-align:middle;"><path d="M6 9l6 6 6-6"></path></svg></a><div aria-label="Home page options" class="nav-home-menu"><a href="index.html">Home 1</a><a href="home2.html">Home 2</a></div></li><li><a href="about.html">About</a></li><li><a href="products.html">Products</a></li><li><a href="school-tieups.html">School Tie-Ups</a></li><li><a href="bulk-pricing.html">Bulk Pricing</a></li><li><a href="contact.html">Contact</a></li><li class="nav-mobile-only nav-mobile-settings" style="display:none;"><button aria-label="Switch to dark mode" aria-pressed="false" class="nav-icon-btn theme-toggle-btn" title="Toggle dark / light mode" type="button"><svg class="icon-svg theme-icon-sun" height="16" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg><svg class="icon-svg theme-icon-moon" height="16" viewbox="0 0 24 24" width="16"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"></path></svg><span>Dark Mode</span></button><button aria-label="Switch to right-to-left layout" aria-pressed="false" class="nav-icon-btn dir-toggle-btn" title="Toggle LTR / RTL direction" type="button"><svg class="icon-svg" height="16" viewbox="0 0 24 24" width="16"><path d="M17 3h4v4M21 3l-6 6"></path><path d="M7 21H3v-4M3 21l6-6"></path></svg><span class="dir-toggle-label">LTR</span></button></li><li class="nav-mobile-only nav-mobile-login-item"><a class="nav-mobile-login" href="login.html"><svg class="icon-svg" height="16" viewbox="0 0 24 24" width="16"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" x2="3" y1="12" y2="12"></line></svg><span>Login</span></a></li></ul>
+<div class="nav-tools"><a class="auth-nav-link" href="login.html">Login</a><button aria-label="Switch to dark mode" aria-pressed="false" class="nav-icon-btn theme-toggle-btn" id="themeToggleBtn" title="Toggle dark / light mode" type="button"><svg class="icon-svg theme-icon-sun" height="18" viewbox="0 0 24 24" width="18"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg><svg class="icon-svg theme-icon-moon" height="18" viewbox="0 0 24 24" width="18"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"></path></svg></button><button aria-label="Switch to right-to-left layout" aria-pressed="false" class="nav-icon-btn dir-toggle-btn" id="dirToggleBtn" title="Toggle LTR / RTL direction" type="button"><svg aria-hidden="true" class="icon-svg dir-toggle-icon" height="17" viewbox="0 0 24 24" width="17"><path d="M4 7h12"></path><path d="M13 3l4 4-4 4"></path><path d="M20 17H8"></path><path d="M11 13l-4 4 4 4"></path></svg><span class="dir-toggle-label">LTR</span></button><button aria-expanded="false" aria-label="Toggle menu" class="nav-toggle"><svg class="icon-svg nav-toggle-icon-open" height="20" viewbox="0 0 24 24" width="20"><path d="M3 12h18"></path><path d="M3 6h18"></path><path d="M3 18h18"></path></svg><svg class="icon-svg nav-toggle-icon-close" height="20" viewbox="0 0 24 24" width="20"><path d="M18 6L6 18"></path><path d="M6 6l12 12"></path></svg></button></div>
+</nav></header>
+<main class="cart-page">
+<div class="container-xl">
+<div class="section-head" style="text-align:left;margin-bottom:26px;"><p class="eyebrow">Your shopping bag</p><h1>Your Cart</h1><p>Review your stationery and textbook items before placing your order.</p></div>
+<div class="cart-layout">
+<section class="cart-panel">
+<div id="cartItems"></div>
+<div class="cart-empty" id="cartEmpty" style="display:none;"><h2>Your cart is empty</h2><p>Add some school essentials and they will appear here.</p><a class="btn-brand" href="products.html">Browse Products</a></div>
+</section>
+<aside class="cart-summary" id="cartSummary">
+<h2>Order Summary</h2>
+<div class="summary-row"><span>Subtotal</span><strong id="cartSubtotal">₹0</strong></div>
+<div class="summary-row"><span>Delivery</span><strong id="cartDelivery">₹0</strong></div>
+<div class="summary-row summary-total"><span>Total</span><strong id="cartTotal">₹0</strong></div>
+<p style="font-size:.82rem;color:var(--ink-500);margin-top:12px;">Free delivery on orders of ₹1,000 or more.</p>
+<button class="btn-brand" onclick="window.location.href='checkout.html'" style="width:100%;justify-content:center;margin-top:8px;" type="button">Proceed to Checkout</button>
+<button class="btn-brand-outline" id="clearCart" style="width:100%;justify-content:center;margin-top:10px;" type="button">Clear Cart</button>
+</aside>
+</div>
+</div>
+</main>
+
+<footer><div class="container-xl"><div class="footer-grid">
+<div class="footer-brand"><a class="brand" href="index.html" style="margin-bottom:14px;"><img alt="Chalk &amp; Cover logo" class="brand-logo" height="36" src="assets/img/logo.svg" width="36"/><span class="brand-word" style="color:#fff;">Chalk &amp; Cover</span></a><p>Your neighbourhood school stationery &amp; textbook supplier — booklists sorted, bulk pricing built in, for parents and school offices alike.</p></div>
+<div><h5>Explore</h5><ul><li><a href="products.html">All Products</a></li>
+<li><a href="about.html">About Us</a></li><li><a href="school-tieups.html">School Tie-Ups</a></li><li><a href="bulk-pricing.html">Bulk Pricing</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+<div><h5>Class Levels</h5><ul><li><a href="products.html#primary">Primary (1–5)</a></li><li><a href="products.html#middle">Middle School (6–8)</a></li><li><a href="products.html#secondary">Secondary (9–12)</a></li></ul></div>
+<div><h5>Contact</h5><ul><li>12 Market Street, Coimbatore</li><li>+91 98765 43210</li><li>orders@chalkandcover.in</li><li>Mon–Sat, 9am–8pm</li></ul></div>
+</div><div class="footer-bottom"><span>© 2026 Chalk &amp; Cover Stationery. All rights reserved.</span><span>Designed for busy parents &amp; school offices.</span></div></div></footer>
+<script src="js/main.js"></script>
+
+<script>
+// Newsletter signup handling
+(function(){
+  const form = document.getElementById('ccNewsletterForm');
+  const success = document.getElementById('ccNewsletterSuccess');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      form.style.display = 'none';
+      if (success) success.style.display = 'block';
+    });
+  }
+})();
+</script>
+</body>
+</html>

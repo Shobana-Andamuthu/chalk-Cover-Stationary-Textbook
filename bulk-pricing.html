@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bulk Pricing | Chalk &amp; Cover</title>
+<meta content="Transparent tiered bulk pricing for parents, classrooms and schools — the bigger your booklist, the more you save." name="description"/>
+<link href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%23FF6B3D%22/&gt;&lt;text x=%2250%22 y=%2266%22 font-size=%2250%22 font-family=%22sans-serif%22 fill=%22white%22 text-anchor=%22middle%22&gt;C&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&amp;family=Inter:wght@400;500;600;700;800&amp;family=Caveat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Bootstrap 5 (grid, accordion, nav components) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Tailwind CSS (utility classes) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: { 50:'#FFF6F0',100:'#FFE4D6',400:'#FFAB85',500:'#FF8A5B',600:'#FF6B3D',700:'#D9481F' },
+          ink: { 900:'#1B2116',700:'#3A4335',500:'#5D6657' }
+        },
+        fontFamily: { display:['Baloo 2','sans-serif'], body:['Inter','sans-serif'] }
+      }
+    }
+  }
+</script>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="bulk-pricing.html" rel="canonical"/>
+</head>
+<body class="font-body bulk-pricing-page">
+<header class="site-navbar">
+<nav class="container-xl">
+<a class="brand" href="index.html"><img alt="Chalk &amp; Cover logo" class="brand-logo" height="36" src="assets/img/logo.svg" width="36"/>
+<span class="brand-word">Chalk &amp; Cover<small>Stationery &amp; Textbooks</small></span>
+</a>
+<ul class="nav-links"><li class="nav-home-item"><a class="nav-home-link nav-home-trigger" href="index.html" aria-haspopup="true">Home <svg class="icon-svg dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" style="margin-left:3px; display:inline-block; vertical-align:middle;"><path d="M6 9l6 6 6-6"></path></svg></a><div aria-label="Home page options" class="nav-home-menu"><a href="index.html">Home 1</a><a href="home2.html">Home 2</a></div></li><li><a href="about.html">About</a></li><li><a href="products.html">Products</a></li><li><a href="school-tieups.html">School Tie-Ups</a></li><li><a class="active" href="bulk-pricing.html">Bulk Pricing</a></li><li><a href="contact.html">Contact</a></li><li class="nav-mobile-only nav-mobile-settings" style="display:none;"><button aria-label="Switch to dark mode" aria-pressed="false" class="nav-icon-btn theme-toggle-btn" title="Toggle dark / light mode" type="button"><svg class="icon-svg theme-icon-sun" height="16" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg><svg class="icon-svg theme-icon-moon" height="16" viewbox="0 0 24 24" width="16"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"></path></svg><span>Dark Mode</span></button><button aria-label="Switch to right-to-left layout" aria-pressed="false" class="nav-icon-btn dir-toggle-btn" title="Toggle LTR / RTL direction" type="button"><svg class="icon-svg" height="16" viewbox="0 0 24 24" width="16"><path d="M17 3h4v4M21 3l-6 6"></path><path d="M7 21H3v-4M3 21l6-6"></path></svg><span class="dir-toggle-label">LTR</span></button></li><li class="nav-mobile-only nav-mobile-login-item"><a class="nav-mobile-login" href="login.html"><svg class="icon-svg" height="16" viewbox="0 0 24 24" width="16"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" x2="3" y1="12" y2="12"></line></svg><span>Login</span></a></li></ul>
+<div class="nav-tools">
+<a class="auth-nav-link" href="login.html">Login</a>
+<button aria-label="Switch to dark mode" aria-pressed="false" class="nav-icon-btn theme-toggle-btn" id="themeToggleBtn" title="Toggle dark / light mode" type="button"><svg class="icon-svg theme-icon-sun" height="18" viewbox="0 0 24 24" width="18"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg><svg class="icon-svg theme-icon-moon" height="18" viewbox="0 0 24 24" width="18"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"></path></svg></button><button aria-label="Switch to right-to-left layout" aria-pressed="false" class="nav-icon-btn dir-toggle-btn" id="dirToggleBtn" title="Toggle LTR / RTL direction" type="button"><svg aria-hidden="true" class="icon-svg dir-toggle-icon" height="17" viewbox="0 0 24 24" width="17"><path d="M4 7h12"></path><path d="M13 3l4 4-4 4"></path><path d="M20 17H8"></path><path d="M11 13l-4 4 4 4"></path></svg><span class="dir-toggle-label">LTR</span></button><button aria-expanded="false" aria-label="Toggle menu" class="nav-toggle"><svg class="icon-svg nav-toggle-icon-open" height="20" viewbox="0 0 24 24" width="20"><path d="M3 12h18"></path><path d="M3 6h18"></path><path d="M3 18h18"></path></svg><svg class="icon-svg nav-toggle-icon-close" height="20" viewbox="0 0 24 24" width="20"><path d="M18 6L6 18"></path><path d="M6 6l12 12"></path></svg></button>
+</div>
+</nav>
+</header>
+<!-- PAGE HEADER -->
+<section class="hero bulk-hero-v2">
+<div class="container-xl">
+<div class="bulk-hero-heading">
+<div>
+<p class="hero-eyebrow"><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg> Transparent institutional pricing</p>
+<h1>More units. <mark>More savings.</mark><br/>Simple bulk pricing for every school order.</h1>
+<p class="lead">No negotiation calls or hidden minimums. Your discount grows automatically as your order moves through the four volume tiers.</p>
+</div>
+<div class="bulk-live-card">
+<div class="bulk-live-top"><span>LIVE TIER PREVIEW</span><b>12%</b></div>
+<p>Example order</p>
+<strong>60 units</strong>
+<div class="bulk-meter"><span style="width:38%"></span></div>
+<div class="bulk-meter-labels"><span>10</span><span>50</span><span>200</span><span>500+</span></div>
+<small>Classroom tier · discount applied automatically</small>
+</div>
+</div>
+<div class="bulk-tier-roadmap">
+<div class="roadmap-line"></div>
+<div class="roadmap-step"><span>01</span><div><b>Starter</b><small>10–49 units</small></div><strong>up to 5%</strong></div>
+<div class="roadmap-step active"><span>02</span><div><b>Classroom</b><small>50–199 units</small></div><strong>up to 12%</strong></div>
+<div class="roadmap-step"><span>03</span><div><b>Grade-Wide</b><small>200–499 units</small></div><strong>up to 18%</strong></div>
+<div class="roadmap-step top"><span>04</span><div><b>Institutional</b><small>500+ / tie-up</small></div><strong>up to 22%</strong></div>
+</div>
+<div class="bulk-hero-bottom">
+<div class="bulk-proof"><span>✓</span> Mixed categories count together</div>
+<div class="bulk-proof"><span>✓</span> School tie-ups get institutional rates</div>
+<div class="bulk-proof"><span>✓</span> Formal quotes within 24 hours</div>
+<div class="hero-ctas">
+<a class="btn-brand" href="#calculator"><svg class="icon-svg" height="18" viewbox="0 0 24 24" width="18"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg> Try the Calculator</a>
+<a class="btn-brand-outline" href="contact.html"><svg class="icon-svg" height="18" viewbox="0 0 24 24" width="18"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 6-10 7L2 6"></path></svg> Request a Formal Quote</a>
+</div>
+</div>
+</div>
+</section>
+<!-- PRICING TIERS -->
+<section class="section-pad">
+<div class="container-xl">
+<div class="section-head">
+<p class="eyebrow">Pricing tiers</p>
+<h2>Four simple tiers, automatically applied</h2>
+</div>
+<div class="row g-4 bulk-tier-grid">
+<div class="col-xl-3 col-md-6"><div class="tier-card"><span class="tier-level">Lv. 01</span>
+<h4 style="margin-bottom:2px;">Starter</h4>
+<div class="tier-photo"><img alt="Starter bulk pack of pens and writing supplies" src="assets/img/bulk-pack-starter.jpg"/></div>
+<p style="font-size:.85rem;">10–49 units per order</p>
+<ul style="text-align:left;margin:16px 0 0;"><li><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><path d="M20 6 9 17l-5-5"></path></svg> Single classroom orders</li><li><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><path d="M20 6 9 17l-5-5"></path></svg> Mixed category items ok</li></ul>
+</div></div>
+<div class="col-xl-3 col-md-6"><div class="tier-card"><span class="tier-level">Lv. 02</span>
+<h4 style="margin-bottom:2px;">Classroom</h4>
+<div class="tier-photo"><img alt="Classroom bulk pack of notebooks and school supplies" src="assets/img/bulk-pack-classroom.jpg"/></div>
+<p style="font-size:.85rem;">50–199 units per order</p>
+<ul style="text-align:left;margin:16px 0 0;"><li><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><path d="M20 6 9 17l-5-5"></path></svg> Full class booklists</li><li><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><path d="M20 6 9 17l-5-5"></path></svg> Priority packing</li></ul>
+</div></div>
+<div class="col-xl-3 col-md-6"><div class="tier-card"><span class="tier-level">Lv. 03</span>
+<h4 style="margin-bottom:2px;">Grade-Wide</h4>
+<div class="tier-photo"><img alt="Grade-wide textbook sets for multiple sections" src="assets/img/bulk-pack-grade.jpg"/></div>
+<p style="font-size:.85rem;">200–499 units per order</p>
+<ul style="text-align:left;margin:16px 0 0;"><li><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><path d="M20 6 9 17l-5-5"></path></svg> Multiple sections</li><li><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><path d="M20 6 9 17l-5-5"></path></svg> Dedicated order desk</li></ul>
+</div></div>
+<div class="col-xl-3 col-md-6"><div class="tier-card tier-card-top"><span class="tier-level">Lv. 04</span>
+<h4 style="margin-bottom:2px;">Institutional</h4>
+<div class="tier-photo"><img alt="Institutional school supply assortment for large orders" src="assets/img/bulk-pack-institutional.jpg"/></div>
+<p style="font-size:.85rem;">500+ units / school tie-up</p>
+<ul style="text-align:left;margin:16px 0 0;"><li><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><path d="M20 6 9 17l-5-5"></path></svg> Custom booklist matching</li><li><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><path d="M20 6 9 17l-5-5"></path></svg> Term-ready delivery</li></ul>
+</div></div>
+</div>
+</div>
+</section>
+<!-- CALCULATOR -->
+<section class="section-pad" id="calculator" style="background:var(--green-50);">
+<div class="container-xl">
+<div class="row g-5 align-items-center">
+<div class="col-lg-6">
+<p class="eyebrow"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg> Quick estimate</p>
+<h2>See your discount tier instantly</h2>
+<p style="color:var(--ink-500);">Enter the total number of items in your order — textbooks, notebooks, pens, art supplies and geometry boxes all count toward the same tier.</p>
+<label class="form-label" for="bulkQty">Total units in your order</label>
+<input class="form-control-brand" id="bulkQty" min="0" style="max-width:260px;" type="number" value="60"/>
+</div>
+<div class="col-lg-6">
+<div class="form-card text-center" id="bulkResult">
+<div class="cat-ic" style="background:var(--green-100);margin:0 auto 14px;"><svg class="icon-svg" height="30" viewbox="0 0 24 24" width="30"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg></div>
+<p class="eyebrow" style="justify-content:center;">Your estimated discount</p>
+<div class="tier-pct-big calc-pct">12%</div>
+<p class="calc-label" style="margin:0;color:var(--ink-500);">50–199 units tier</p>
+<a class="btn-brand" href="contact.html" style="margin-top:16px;"><svg class="icon-svg" height="16" viewbox="0 0 24 24" width="16"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 6-10 7L2 6"></path></svg> Get Exact Quote</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FULL TABLE -->
+<section class="section-pad">
+<div class="container-xl">
+<div class="section-head">
+<p class="eyebrow">Full pricing table</p>
+<h2>Category-wise bulk discounts</h2>
+</div>
+<div style="overflow-x:auto;">
+<table class="price-table">
+<thead>
+<tr><th>Category</th><th>10–49 units</th><th>50–199 units</th><th>200–499 units</th><th>500+ / Tie-Up</th></tr>
+</thead>
+<tbody>
+<tr><td><svg class="icon-svg" height="16" viewbox="0 0 24 24" width="16"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"></path></svg> Textbooks</td><td class="tier-pct">5%</td><td class="tier-pct">12%</td><td class="tier-pct">18%</td><td class="tier-pct">22%</td></tr>
+<tr><td><svg class="icon-svg" height="16" viewbox="0 0 24 24" width="16"><path d="M6 2h13a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Z"></path><path d="M2 6h4M2 10h4M2 14h4M2 18h4"></path><path d="M9 2v20"></path></svg> Notebooks</td><td class="tier-pct">5%</td><td class="tier-pct">10%</td><td class="tier-pct">15%</td><td class="tier-pct">20%</td></tr>
+<tr><td><svg class="icon-svg" height="16" viewbox="0 0 24 24" width="16"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path><path d="m15 5 4 4"></path></svg> Pens &amp; Pencils</td><td class="tier-pct">4%</td><td class="tier-pct">10%</td><td class="tier-pct">15%</td><td class="tier-pct">18%</td></tr>
+<tr><td><svg class="icon-svg" height="16" viewbox="0 0 24 24" width="16"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.9 0 1.6-.7 1.6-1.6 0-.4-.2-.8-.4-1.1-.3-.3-.4-.7-.4-1.1 0-.9.7-1.6 1.6-1.6H16c3.3 0 6-2.7 6-6 0-4.9-4.5-8.6-9.9-8.6Z"></path></svg> Art Supplies</td><td class="tier-pct">5%</td><td class="tier-pct">12%</td><td class="tier-pct">16%</td><td class="tier-pct">20%</td></tr>
+<tr><td><svg class="icon-svg" height="16" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="10"></circle><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12Z"></path></svg> Geometry Boxes</td><td class="tier-pct">4%</td><td class="tier-pct">10%</td><td class="tier-pct">14%</td><td class="tier-pct">18%</td></tr>
+<tr><td><svg class="icon-svg" height="16" viewbox="0 0 24 24" width="16"><path d="M6 8a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1Z"></path><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"></path><path d="M9 12h6"></path><path d="M6 10H4v5h2"></path><path d="M18 10h2v5h-2"></path></svg> Bags &amp; Cases</td><td class="tier-pct">3%</td><td class="tier-pct">8%</td><td class="tier-pct">12%</td><td class="tier-pct">16%</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="section-pad" style="background:var(--green-50);">
+<div class="container-xl">
+<div class="section-head">
+<p class="eyebrow">Common questions</p>
+<h2>Bulk pricing FAQ</h2>
+</div>
+<div class="home2-faq" style="max-width:820px;">
+<details open=""><summary>Do discounts apply across categories in one order?</summary><p>Yes — mix textbooks, notebooks, pens and art supplies in a single order and the combined unit count determines your tier.</p></details>
+<details><summary>Is there a separate rate for schools with a tie-up?</summary><p>Schools with an active tie-up get the 500+ institutional tier automatically, regardless of individual parent order size, plus dedicated booklist matching.</p></details>
+<details><summary>How fast can I get a formal quotation?</summary><p>Standard bulk quotes are returned within 24 hours; full school tie-up booklists within 48 hours.</p></details>
+<details><summary>Can bulk orders be split across delivery dates?</summary><p>Yes, large institutional orders can be phased across delivery dates at no extra cost — just mention this in your enquiry.</p></details>
+</div>
+</div>
+</section>
+<!-- CTA -->
+<section class="editorial-flow alt">
+<div class="container-xl editorial-grid">
+<div>
+<p class="editorial-kicker">Why the tiers stay simple</p>
+<h2>Volume should change the rate, not the conversation.</h2>
+</div>
+<div class="editorial-copy">
+<p>The pricing model is designed so a larger requirement moves into the appropriate tier automatically. That means your team can plan quantities without starting a fresh negotiation for every order.</p>
+<div class="editorial-rule"></div>
+<p class="editorial-note">Clear quantities in. Clear institutional rate out.</p>
+</div>
+</div>
+</section><section class="editorial-flow">
+<div class="container-xl editorial-grid">
+<div>
+<p class="editorial-kicker">Planning a larger order</p>
+<h2>Give us the list once and let us check the details.</h2>
+</div>
+<div class="editorial-copy">
+<p>Include the expected quantity, delivery window and whether the requirement is for a school, classroom, event or institution. We can then confirm availability and the applicable tier together.</p>
+<div class="editorial-rule"></div>
+<p>That keeps the quote useful for purchasing decisions instead of turning it into another round of back-and-forth.</p>
+</div>
+</div>
+</section><section class="section-pad text-center">
+<div class="container-xl" style="max-width:640px;">
+<p class="eyebrow" style="justify-content:center;"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 6-10 7L2 6"></path></svg> Ready to order in bulk?</p>
+<h2>Send your list, get a quote in 24 hours</h2>
+<div class="hero-ctas cta-center">
+<a class="btn-dark" href="contact.html"><svg class="icon-svg" height="17" viewbox="0 0 24 24" width="17"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 6-10 7L2 6"></path></svg> Request Bulk Quote</a>
+<a class="btn-brand-outline" href="school-tieups.html"><svg class="icon-svg" height="17" viewbox="0 0 24 24" width="17"><path d="m11 17 2 2a1 1 0 1 0 3-3"></path><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 8.06 0L23 9"></path><path d="m21 3 1 11h-2"></path><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"></path><path d="M3 4h8"></path></svg> School Tie-Up Program</a>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container-xl">
+<div class="footer-grid">
+<div class="footer-brand">
+<a class="brand" href="index.html" style="margin-bottom:14px;"><img alt="Chalk &amp; Cover logo" class="brand-logo" height="36" src="assets/img/logo.svg" width="36"/>
+<span class="brand-word" style="color:#fff;">Chalk &amp; Cover</span>
+</a>
+<p>Your neighbourhood school stationery &amp; textbook supplier — booklists sorted, bulk pricing built in, for parents and school offices alike.</p>
+<div class="social-row">
+<a aria-label="Facebook" href="https://facebook.com/chalkandcover" rel="noopener noreferrer" target="_blank"><svg class="icon-svg" height="16" viewbox="0 0 24 24" width="16"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"></path></svg></a>
+<a aria-label="Instagram" href="https://instagram.com/chalkandcover" rel="noopener noreferrer" target="_blank"><svg class="icon-svg" height="16" viewbox="0 0 24 24" width="16"><rect height="20" rx="5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a>
+<a aria-label="WhatsApp" href="https://wa.me/919876543210" rel="noopener noreferrer" target="_blank"><svg class="icon-svg" height="16" viewbox="0 0 24 24" width="16"><path d="M17.6 6.3A9 9 0 0 0 3.9 17.7L3 21l3.4-.9A9 9 0 1 0 17.6 6.3Z"></path><path d="M8.5 8.9c.2-.5.4-.5.6-.5h.5c.2 0 .4 0 .5.4.2.5.6 1.6.6 1.7.1.1.1.3 0 .4-.1.2-.1.3-.3.4-.1.2-.3.3-.4.5-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1.2-.2.7-.8.9-1.1.2-.2.4-.2.6-.1.2.1 1.5.7 1.7.8.2.1.4.2.4.3.1.4.1.8-.1 1.2-.2.4-1.1 1-1.9 1.1-.5.1-1.2.1-3.7-1-3-1.3-4.9-4.4-5.1-4.6-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4Z"></path></svg></a>
+</div>
+</div>
+<div>
+<h5>Explore</h5>
+<ul>
+<li><a href="products.html">All Products</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="school-tieups.html">School Tie-Ups</a></li>
+<li><a href="bulk-pricing.html">Bulk Pricing</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h5>Class Levels</h5>
+<ul>
+<li><a href="products.html#primary">Primary (1–5)</a></li>
+<li><a href="products.html#middle">Middle School (6–8)</a></li>
+<li><a href="products.html#secondary">Secondary (9–12)</a></li>
+<li><a href="bulk-pricing.html">Bulk &amp; Tie-Up Rates</a></li>
+</ul>
+</div>
+<div>
+<h5>Contact</h5>
+<ul>
+<li><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg> 12 Market Street, Coimbatore</li>
+<li><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92Z"></path></svg> +91 98765 43210</li>
+<li><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 6-10 7L2 6"></path></svg> orders@chalkandcover.in</li>
+<li><svg class="icon-svg" height="15" viewbox="0 0 24 24" width="15"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg> Mon–Sat, 9am–8pm</li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Chalk &amp; Cover Stationery. All rights reserved.</span>
+<span>Designed for busy parents &amp; school offices.</span>
+</div>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+// Newsletter signup handling
+(function(){
+  const form = document.getElementById('ccNewsletterForm');
+  const success = document.getElementById('ccNewsletterSuccess');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      form.style.display = 'none';
+      if (success) success.style.display = 'block';
+    });
+  }
+})();
+</script>
+</body>
+</html>
