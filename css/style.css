@@ -2507,34 +2507,77 @@ body.dark-mode .step-row-timeline .step-card p {
 }
 
 body.dark-mode .home2-hero-split {
-  background: linear-gradient(135deg, #1c1410 0%, #251a14 50%, #1a120e 100%) !important;
-  border-color: #382b23 !important;
+  background: linear-gradient(135deg, #19120e 0%, #221711 50%, #17100b 100%) !important;
+  border-bottom-color: #382b23 !important;
+}
+body.dark-mode .home2-badge {
+  background: rgba(46, 125, 96, 0.25) !important;
+  color: #4ade80 !important;
 }
 body.dark-mode .home2-hero-left h1 {
-  color: #f1e7e0 !important;
+  color: #ffffff !important;
+}
+body.dark-mode .home2-hero-left h1 mark {
+  color: #4ade80 !important;
 }
 body.dark-mode .home2-subhead {
-  color: #c0b0a6 !important;
+  color: #d1c4bc !important;
 }
 body.dark-mode .home2-quick-pills {
   background: #241a15 !important;
   border-color: #382b23 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
 }
 body.dark-mode .home2-quick-pills .pill-label {
   color: #f1e7e0 !important;
 }
+body.dark-mode .hero-pill {
+  background: #342219 !important;
+  border-color: #4a3428 !important;
+  color: #4ade80 !important;
+}
+body.dark-mode .hero-pill:hover {
+  background: var(--green-600) !important;
+  border-color: var(--green-600) !important;
+  color: #ffffff !important;
+}
+body.dark-mode .home2-hero-left .btn-brand-outline {
+  border-color: #4a3428 !important;
+  color: #f1e7e0 !important;
+  background: #241a15 !important;
+}
+body.dark-mode .home2-hero-left .btn-brand-outline:hover {
+  background: var(--green-600) !important;
+  border-color: var(--green-600) !important;
+  color: #ffffff !important;
+}
+body.dark-mode .home2-hero-points span {
+  color: #e5d7d0 !important;
+}
+body.dark-mode .home2-hero-points span svg {
+  color: #4ade80 !important;
+}
+body.dark-mode .home2-hero-card-frame {
+  border-color: #2e221b !important;
+}
 body.dark-mode .home2-float-card {
-  background: rgba(36, 26, 21, 0.92) !important;
-  border-color: #382b23 !important;
+  background: rgba(36, 26, 21, 0.95) !important;
+  border-color: #443227 !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4) !important;
 }
 body.dark-mode .home2-float-card strong {
-  color: #f1e7e0 !important;
+  color: #ffffff !important;
 }
 body.dark-mode .home2-float-card span {
   color: #c0b0a6 !important;
 }
-body.dark-mode .home2-hero-points span {
-  color: #f1e7e0 !important;
+body.dark-mode .home2-float-card .float-icon {
+  background: #3c261e !important;
+  color: #4ade80 !important;
+}
+body.dark-mode .home2-float-card .float-icon-alt {
+  background: #3c2b18 !important;
+  color: #fbbf24 !important;
 }
 
 body.dark-mode .cc-newsletter-section {
