@@ -2425,4 +2425,19 @@ html[dir="rtl"] .nav-home-item.is-open .dropdown-arrow {
   visibility: visible !important;
 }
 
+/* Tablet responsive 2-column layout for 4-card grids (701px to 1199px) */
+@media (min-width: 701px) and (max-width: 1199px) {
+  .home2-feature-grid,
+  .cc-trust-grid,
+  .home2-trust-grid,
+  .step-row,
+  .why-tieup-row,
+  .four-card-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+    align-items: stretch !important;
+  }
+}
+
+
 
