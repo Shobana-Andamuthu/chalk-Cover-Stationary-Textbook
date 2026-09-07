@@ -562,6 +562,13 @@ function getMobileNavEls() {
 function openMobileMenu() {
   var els = getMobileNavEls();
   if (!els.links) { return; }
+  // Ensure all dropdowns are always collapsed when opening the menu ("open panavey vara kudathu")
+  document.querySelectorAll('.nav-home-item.is-open').forEach(function (item) {
+    item.classList.remove('is-open');
+  });
+  document.querySelectorAll('.nav-dropdown-toggle').forEach(function (btn) {
+    btn.setAttribute('aria-expanded', 'false');
+  });
   setMobileNavTop();
   els.links.classList.add('open');
   if (els.backdrop) { els.backdrop.classList.add('open'); }
@@ -574,6 +581,12 @@ function closeMobileMenu() {
   els.links.classList.remove('open');
   if (els.backdrop) { els.backdrop.classList.remove('open'); }
   if (els.toggle) { els.toggle.setAttribute('aria-expanded', 'false'); }
+  document.querySelectorAll('.nav-home-item.is-open').forEach(function (item) {
+    item.classList.remove('is-open');
+  });
+  document.querySelectorAll('.nav-dropdown-toggle').forEach(function (btn) {
+    btn.setAttribute('aria-expanded', 'false');
+  });
   unlockBodyScroll();
 }
 
@@ -702,51 +715,158 @@ document.addEventListener('DOMContentLoaded', function () {
 })();
 
 
-// FINAL: Responsive Home submenu — desktop hover, mobile/tablet tap.
+// Responsive Home submenu — desktop hover, mobile/tablet dedicated toggle button.
 (function () {
   function initHomeSubmenu() {
     document.querySelectorAll('.nav-home-item').forEach(function (item) {
-      var trigger = item.querySelector('.nav-home-trigger');
+      var toggleBtn = item.querySelector('.nav-dropdown-toggle');
+      var homeLink = item.querySelector('.nav-home-link, .nav-home-trigger');
       var menu = item.querySelector('.nav-home-menu');
-      if (!trigger || !menu || trigger.dataset.homeBound === '1') return;
-      trigger.dataset.homeBound = '1';
+      if (!menu) return;
 
-      trigger.addEventListener('click', function (e) {
-        var compact = window.innerWidth <= 1199;
-        if (!compact) {
-          // Desktop: click follows the Home link; hover/focus shows submenu.
-          return;
-        }
-        // Mobile/tablet: first tap opens submenu; second tap goes to Home.
-        if (!item.classList.contains('is-open')) {
-          e.preventDefault();
-          document.querySelectorAll('.nav-home-item.is-open').forEach(function (other) {
-            if (other !== item) other.classList.remove('is-open');
-          });
+      // Hover support: hovering Home (desktop and mobile drawer) reveals options below immediately
+      if (item.dataset.homeHoverBound !== '1') {
+        item.dataset.homeHoverBound = '1';
+        var homeRow = item.querySelector('.nav-home-row');
+
+        function openSubmenu() {
           item.classList.add('is-open');
-        } else {
-          item.classList.remove('is-open');
-          // normal href navigation continues to index.html
+          if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'true');
         }
-      });
 
+        function closeSubmenu(e) {
+          if (e && e.relatedTarget && item.contains(e.relatedTarget)) {
+            return;
+          }
+          item.classList.remove('is-open');
+          if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
+        }
+
+        item.addEventListener('mouseenter', openSubmenu);
+        item.addEventListener('mouseover', openSubmenu);
+        item.addEventListener('pointerenter', openSubmenu);
+        if (homeRow) {
+          homeRow.addEventListener('mouseenter', openSubmenu);
+          homeRow.addEventListener('mouseover', openSubmenu);
+          homeRow.addEventListener('pointerenter', openSubmenu);
+        }
+        if (homeLink) {
+          homeLink.addEventListener('mouseenter', openSubmenu);
+          homeLink.addEventListener('mouseover', openSubmenu);
+          homeLink.addEventListener('pointerenter', openSubmenu);
+        }
+
+        item.addEventListener('mouseleave', closeSubmenu);
+      }
+
+      // When clicking the dropdown button specifically:
+      if (toggleBtn && toggleBtn.dataset.homeToggleBound !== '1') {
+        toggleBtn.dataset.homeToggleBound = '1';
+        toggleBtn.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          var willOpen = !item.classList.contains('is-open');
+          document.querySelectorAll('.nav-home-item.is-open').forEach(function (other) {
+            if (other !== item) {
+              other.classList.remove('is-open');
+              var otherBtn = other.querySelector('.nav-dropdown-toggle');
+              if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+            }
+          });
+          item.classList.toggle('is-open', willOpen);
+          toggleBtn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+        });
+      }
+
+      // If user clicks the Home link itself:
+      // In mobile/tablet menu (<= 1199px), clicking Home reveals the options underneath
+      if (homeLink && homeLink.dataset.homeLinkBound !== '1') {
+        homeLink.dataset.homeLinkBound = '1';
+        homeLink.addEventListener('click', function (e) {
+          if (window.innerWidth <= 1199) {
+            e.preventDefault();
+            var willOpen = !item.classList.contains('is-open');
+            document.querySelectorAll('.nav-home-item.is-open').forEach(function (other) {
+              if (other !== item) {
+                other.classList.remove('is-open');
+                var otherBtn = other.querySelector('.nav-dropdown-toggle');
+                if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+              }
+            });
+            item.classList.toggle('is-open', willOpen);
+            if (toggleBtn) toggleBtn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+            return;
+          }
+          item.classList.remove('is-open');
+        });
+      }
+
+      // Submenu links (Home 1, Home 2) navigate and close everything
       menu.querySelectorAll('a').forEach(function (link) {
         link.addEventListener('click', function () {
           item.classList.remove('is-open');
+          if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
           closeMobileMenu();
         });
       });
     });
 
+    // Close dropdown when clicking outside
     document.addEventListener('click', function (e) {
       if (e.target.closest('.nav-home-item')) return;
       document.querySelectorAll('.nav-home-item.is-open').forEach(function (item) {
         item.classList.remove('is-open');
+        var btn = item.querySelector('.nav-dropdown-toggle');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
       });
     });
   }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initHomeSubmenu);
-  else initHomeSubmenu();
+
+  // Automatic active page detection across all routes
+  function initActiveNavHighlight() {
+    var rawPath = window.location.pathname.toLowerCase();
+    var currentFile = rawPath.substring(rawPath.lastIndexOf('/') + 1) || 'index.html';
+    if (!currentFile.endsWith('.html')) {
+      currentFile = 'index.html';
+    }
+
+    // Reset existing active markers
+    document.querySelectorAll('.nav-links a.active, .nav-home-menu a.active').forEach(function (a) {
+      a.classList.remove('active');
+    });
+    document.querySelectorAll('.nav-home-item').forEach(function (item) {
+      item.classList.remove('has-active');
+    });
+
+    if (currentFile === 'index.html' || currentFile === '') {
+      var homeLink = document.querySelector('.nav-home-link, .nav-home-trigger');
+      if (homeLink) homeLink.classList.add('active');
+      var home1 = document.querySelector('.nav-home-menu a[href*="index.html"]');
+      if (home1) home1.classList.add('active');
+      var parentItem = document.querySelector('.nav-home-item');
+      if (parentItem) parentItem.classList.add('has-active');
+    } else if (currentFile === 'home2.html') {
+      var homeLink = document.querySelector('.nav-home-link, .nav-home-trigger');
+      if (homeLink) homeLink.classList.add('active');
+      var home2 = document.querySelector('.nav-home-menu a[href*="home2.html"]');
+      if (home2) home2.classList.add('active');
+      var parentItem = document.querySelector('.nav-home-item');
+      if (parentItem) parentItem.classList.add('has-active');
+    } else {
+      var match = document.querySelector('.nav-links > li > a[href*="' + currentFile + '"]');
+      if (match) match.classList.add('active');
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+      initHomeSubmenu();
+      initActiveNavHighlight();
+    });
+  } else {
+    initHomeSubmenu();
+    initActiveNavHighlight();
+  }
 })();
 
 // ---------------------------------------------------------------
