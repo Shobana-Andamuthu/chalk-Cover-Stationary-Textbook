@@ -2314,13 +2314,12 @@ body.dark-mode .tier-level{background:#35251f;color:#dc8a79;}
     box-shadow:none;border-top:0;border-right:0;border-bottom:0;
     gap:4px;
   }
+  .nav-links.open .nav-home-item.is-open > .nav-home-menu,
+  .nav-links.open .nav-home-item:focus-within > .nav-home-menu{
+    display:flex;
+  }
   .nav-home-item.is-open > .nav-home-menu,
-  .nav-home-item:hover > .nav-home-menu,
-  .nav-home-row:hover + .nav-home-menu,
-  .nav-home-row:hover ~ .nav-home-menu,
-  .nav-home-item:focus-within > .nav-home-menu,
-  .nav-home-item:has(.nav-home-link:hover) > .nav-home-menu,
-  .nav-home-item:has(.nav-home-row:hover) > .nav-home-menu{
+  .nav-home-item:focus-within > .nav-home-menu{
     display:flex !important;
     opacity:1 !important;
     visibility:visible !important;

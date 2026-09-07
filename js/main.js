@@ -413,7 +413,7 @@
         // On mobile/tablet, the first tap on "Home" only opens the Home 1 / Home 2
         // submenu (see initHomeSubmenu below) and must not navigate yet. Let that
         // handler manage the tap; the loader takes over again on the second tap.
-        if (link.classList.contains('nav-home-trigger') && window.innerWidth <= 1199) {
+        if ((link.classList.contains('nav-home-link') || link.classList.contains('nav-home-trigger')) && window.innerWidth <= 1199) {
           const homeItem = link.closest('.nav-home-item');
           if (homeItem && !homeItem.classList.contains('is-open')) return;
         }
@@ -451,7 +451,7 @@
       // page starts navigating away, or once a same-page menu link scrolls
       // to a new position.
       links.querySelectorAll('a').forEach(function (a) {
-        if (a.classList.contains('nav-home-trigger')) { return; } // handled separately below
+        if (a.closest('.nav-home-item')) { return; } // handled separately below
         a.addEventListener('click', function () {
           if (window.innerWidth <= 1199) { closeMobileMenu(); }
         });
@@ -724,7 +724,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var menu = item.querySelector('.nav-home-menu');
       if (!menu) return;
 
-      // Hover support: hovering Home (desktop and mobile drawer) reveals options below immediately
+      // Hover support belongs only to pointer devices; touch screens use the click handler below.
       if (item.dataset.homeHoverBound !== '1') {
         item.dataset.homeHoverBound = '1';
         var homeRow = item.querySelector('.nav-home-row');
@@ -742,21 +742,22 @@ document.addEventListener('DOMContentLoaded', function () {
           if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
         }
 
-        item.addEventListener('mouseenter', openSubmenu);
-        item.addEventListener('mouseover', openSubmenu);
-        item.addEventListener('pointerenter', openSubmenu);
-        if (homeRow) {
-          homeRow.addEventListener('mouseenter', openSubmenu);
-          homeRow.addEventListener('mouseover', openSubmenu);
-          homeRow.addEventListener('pointerenter', openSubmenu);
+        if (window.innerWidth > 1199 && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+          item.addEventListener('mouseenter', openSubmenu);
+          item.addEventListener('mouseover', openSubmenu);
+          item.addEventListener('pointerenter', openSubmenu);
+          if (homeRow) {
+            homeRow.addEventListener('mouseenter', openSubmenu);
+            homeRow.addEventListener('mouseover', openSubmenu);
+            homeRow.addEventListener('pointerenter', openSubmenu);
+          }
+          if (homeLink) {
+            homeLink.addEventListener('mouseenter', openSubmenu);
+            homeLink.addEventListener('mouseover', openSubmenu);
+            homeLink.addEventListener('pointerenter', openSubmenu);
+          }
+          item.addEventListener('mouseleave', closeSubmenu);
         }
-        if (homeLink) {
-          homeLink.addEventListener('mouseenter', openSubmenu);
-          homeLink.addEventListener('mouseover', openSubmenu);
-          homeLink.addEventListener('pointerenter', openSubmenu);
-        }
-
-        item.addEventListener('mouseleave', closeSubmenu);
       }
 
       // When clicking the dropdown button specifically:
@@ -785,6 +786,7 @@ document.addEventListener('DOMContentLoaded', function () {
         homeLink.addEventListener('click', function (e) {
           if (window.innerWidth <= 1199) {
             e.preventDefault();
+            e.stopPropagation();
             var willOpen = !item.classList.contains('is-open');
             document.querySelectorAll('.nav-home-item.is-open').forEach(function (other) {
               if (other !== item) {
