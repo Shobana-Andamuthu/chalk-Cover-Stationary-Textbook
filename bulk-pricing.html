@@ -114,23 +114,25 @@
 </div>
 </section>
 <!-- CALCULATOR -->
-<section class="section-pad" id="calculator" style="background:var(--green-50);">
+<section class="section-pad quick-estimate-section" id="calculator" style="background:var(--green-50);">
 <div class="container-xl">
-<div class="row g-5 align-items-center">
-<div class="col-lg-6">
-<p class="eyebrow"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg> Quick estimate</p>
-<h2>See your discount tier instantly</h2>
-<p style="color:var(--ink-500);">Enter the total number of items in your order — textbooks, notebooks, pens, art supplies and geometry boxes all count toward the same tier.</p>
-<label class="form-label" for="bulkQty">Total units in your order</label>
-<input class="form-control-brand" id="bulkQty" min="0" style="max-width:260px;" type="number" value="60"/>
+<div class="row g-4 align-items-center">
+<div class="col-lg-6 d-flex flex-column align-items-start text-start">
+<p class="eyebrow" style="display:inline-flex;align-items:center;gap:6px;margin-bottom:10px;"><svg class="icon-svg" height="14" viewbox="0 0 24 24" width="14"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg> Quick estimate</p>
+<h2 style="margin-bottom:10px;">See your discount tier instantly</h2>
+<p style="color:var(--ink-500);margin-bottom:20px;max-width:520px;line-height:1.55;">Enter the total number of items in your order — textbooks, notebooks, pens, art supplies and geometry boxes all count toward the same tier.</p>
+<div style="width:100%;max-width:320px;">
+<label class="form-label" for="bulkQty" style="font-weight:700;margin-bottom:6px;display:block;color:var(--ink-900);">Total units in your order</label>
+<input class="form-control-brand" id="bulkQty" min="0" style="width:100%;height:46px;font-size:1.05rem;font-weight:700;padding:0 16px;border-radius:10px;border:1px solid var(--gray-200);background:#fff;" type="number" value="60"/>
+</div>
 </div>
 <div class="col-lg-6">
-<div class="form-card text-center" id="bulkResult">
-<div class="cat-ic" style="background:var(--green-100);margin:0 auto 14px;"><svg class="icon-svg" height="30" viewbox="0 0 24 24" width="30"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg></div>
-<p class="eyebrow" style="justify-content:center;">Your estimated discount</p>
-<div class="tier-pct-big calc-pct">12%</div>
-<p class="calc-label" style="margin:0;color:var(--ink-500);">50–199 units tier</p>
-<a class="btn-brand" href="contact.html" style="margin-top:16px;"><svg class="icon-svg" height="16" viewbox="0 0 24 24" width="16"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 6-10 7L2 6"></path></svg> Get Exact Quote</a>
+<div class="form-card text-center d-flex flex-column align-items-center justify-content-center" id="bulkResult" style="padding:32px 24px;border-radius:18px;">
+<div class="cat-ic" style="background:var(--green-100);margin:0 auto 14px;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--green-700);"><svg class="icon-svg" height="28" viewbox="0 0 24 24" width="28"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg></div>
+<p class="eyebrow" style="justify-content:center;margin-bottom:6px;">Your estimated discount</p>
+<div class="tier-pct-big calc-pct" style="font-size:3rem;font-weight:800;color:var(--green-700);margin:4px 0 8px;">12%</div>
+<p class="calc-label" style="margin:0 0 16px;color:var(--ink-500);font-weight:600;">50–199 units tier</p>
+<a class="btn-brand" href="contact.html" style="margin-top:4px;display:inline-flex;align-items:center;gap:8px;padding:12px 24px;"><svg class="icon-svg" height="16" viewbox="0 0 24 24" width="16"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 6-10 7L2 6"></path></svg> Get Exact Quote</a>
 </div>
 </div>
 </div>

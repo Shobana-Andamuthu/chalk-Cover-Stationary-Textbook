@@ -3033,5 +3033,361 @@ html[dir="rtl"] .nav-home-item.is-open .dropdown-arrow {
   }
 }
 
+/* ===========================================================
+   CLIENT CORRECTIONS - SPECIFIC DESIGN & CONTRAST ENHANCEMENTS
+   =========================================================== */
 
+/* --- Item 1 & 5: Header Login CTA & Professional Logo --- */
+.auth-nav-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 38px !important;
+  padding: 0 20px !important;
+  background: var(--green-600) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 0.88rem !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 2px 6px rgba(217, 72, 31, 0.25) !important;
+  white-space: nowrap !important;
+}
+.auth-nav-link:hover, .auth-nav-link:focus {
+  background: var(--green-700) !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(217, 72, 31, 0.35) !important;
+}
+body.dark-mode .auth-nav-link {
+  background: var(--green-600) !important;
+  color: #ffffff !important;
+}
+
+.brand-logo {
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 10px !important;
+  flex-shrink: 0 !important;
+  object-fit: contain !important;
+}
+
+/* --- Item 2: Home Page 1 "Why Schools Choose Us" Card Images --- */
+.step-img-wrap {
+  width: 100% !important;
+  height: 160px !important;
+  overflow: hidden !important;
+  border-radius: 12px !important;
+  margin-bottom: 16px !important;
+  background: var(--green-100) !important;
+}
+.step-card-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: transform 0.3s ease !important;
+}
+.step-card:hover .step-card-img {
+  transform: scale(1.05) !important;
+}
+
+/* --- Item 3: Bulk Pricing Band CTA Spacing --- */
+.bulk-band-col div a.btn-brand,
+.bulk-band-section a.btn-brand {
+  margin-top: 1.75rem !important;
+  display: inline-flex !important;
+}
+
+/* --- Item 4: Bulk Pricing Page Dark Mode Hero Contrast --- */
+body.dark-mode .bulk-hero-v2 {
+  background: linear-gradient(180deg, #1f1814 0%, #17110e 100%) !important;
+}
+body.dark-mode .bulk-hero-v2 h1 {
+  color: #ffffff !important;
+}
+body.dark-mode .bulk-hero-v2 .lead {
+  color: #e2e8f0 !important;
+}
+body.dark-mode .bulk-hero-v2 .hero-eyebrow {
+  color: #ffab85 !important;
+  background: #3b2318 !important;
+}
+body.dark-mode .bulk-live-card {
+  background: #241b16 !important;
+  border-color: #4a362b !important;
+  color: #ffffff !important;
+}
+body.dark-mode .bulk-live-top {
+  color: #ffffff !important;
+}
+body.dark-mode .bulk-live-top b {
+  color: #ff8a6b !important;
+}
+body.dark-mode .bulk-live-card p,
+body.dark-mode .bulk-live-card small {
+  color: #cbd5e1 !important;
+}
+body.dark-mode .bulk-meter-labels span {
+  color: #94a3b8 !important;
+}
+body.dark-mode .roadmap-step {
+  background: #241b16 !important;
+  border-color: #4a362b !important;
+  color: #ffffff !important;
+}
+body.dark-mode .roadmap-step b {
+  color: #ffffff !important;
+}
+body.dark-mode .roadmap-step small {
+  color: #cbd5e1 !important;
+}
+body.dark-mode .roadmap-step strong {
+  color: #ffab85 !important;
+}
+body.dark-mode .roadmap-step > span {
+  background: #3a2a21 !important;
+  color: #ffffff !important;
+}
+body.dark-mode .roadmap-step.active > span,
+body.dark-mode .roadmap-step.top > span {
+  background: var(--green-600) !important;
+  color: #ffffff !important;
+}
+body.dark-mode .bulk-proof {
+  color: #e2e8f0 !important;
+}
+body.dark-mode .bulk-proof span {
+  color: #ff8a6b !important;
+}
+
+/* --- Item 6: Home 2 Dark Mode "Ready When You Are" Contrast --- */
+body.dark-mode .home2-cta {
+  background: #1c1410 !important;
+  border-color: #382921 !important;
+}
+body.dark-mode .home2-cta h2 {
+  color: #ffffff !important;
+}
+body.dark-mode .home2-cta p {
+  color: #e2e8f0 !important;
+}
+body.dark-mode .home2-cta .btn-brand-outline {
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+}
+body.dark-mode .home2-cta .btn-brand-outline:hover {
+  background: #ffffff !important;
+  color: var(--ink-900) !important;
+}
+
+/* --- Item 8: Products Page Hero Centered Text --- */
+.products-hero-centered {
+  text-align: center !important;
+}
+.products-hero-centered .eyebrow {
+  justify-content: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.products-hero-centered h1 {
+  text-align: center !important;
+}
+.products-hero-centered p {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* --- Item 9: Products Page "Ordering for a Class?" Subtext Contrast --- */
+.ordering-class-box {
+  background: var(--green-600) !important;
+  border-color: var(--green-600) !important;
+  color: #ffffff !important;
+}
+.ordering-class-box h5 {
+  color: #ffffff !important;
+}
+.ordering-class-box p {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+}
+body.dark-mode .ordering-class-box {
+  background: #2a1b15 !important;
+  border-color: var(--green-600) !important;
+}
+body.dark-mode .ordering-class-box h5 {
+  color: #ffffff !important;
+}
+body.dark-mode .ordering-class-box p {
+  color: #e2e8f0 !important;
+}
+
+/* --- Item 11: Sign Up / Login Visual Contrast Overlay & Positioning --- */
+.auth-visual {
+  position: relative !important;
+  overflow: hidden !important;
+}
+.auth-visual::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.2) 0%, rgba(15, 23, 42, 0.88) 100%) !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
+.auth-visual-copy {
+  position: absolute !important;
+  left: clamp(24px, 5vw, 60px) !important;
+  right: clamp(24px, 5vw, 60px) !important;
+  bottom: clamp(32px, 5vw, 60px) !important;
+  z-index: 5 !important;
+  color: #ffffff !important;
+  max-width: 540px !important;
+}
+.auth-visual-copy h1 {
+  color: #ffffff !important;
+  font-size: clamp(1.8rem, 3.5vw, 3rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+  margin-bottom: 10px !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6) !important;
+}
+.auth-visual-copy p {
+  color: #f1f5f9 !important;
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem) !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) !important;
+}
+.auth-visual-copy .eyebrow {
+  color: #ffab85 !important;
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+}
+
+@media (max-width: 800px) {
+  .auth-visual-copy {
+    left: 20px !important;
+    right: 20px !important;
+    bottom: 20px !important;
+  }
+  .auth-visual-copy h1 {
+    font-size: 1.65rem !important;
+  }
+  .auth-visual-copy p {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* ===========================================================
+   DARK MODE BUTTON & FORM CONTRAST OVERRIDES
+   =========================================================== */
+
+/* Input Fields, Textareas & Selects in Dark Mode */
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea,
+body.dark-mode .form-control,
+body.dark-mode .form-control-brand,
+body.dark-mode #bulkQty {
+  background-color: #271f1a !important;
+  color: #ffffff !important;
+  border: 1.5px solid #523e32 !important;
+  box-shadow: none !important;
+}
+
+body.dark-mode input:focus,
+body.dark-mode select:focus,
+body.dark-mode textarea:focus,
+body.dark-mode .form-control:focus,
+body.dark-mode .form-control-brand:focus,
+body.dark-mode #bulkQty:focus {
+  background-color: #2e241e !important;
+  color: #ffffff !important;
+  border-color: #ff6b3d !important;
+  box-shadow: 0 0 0 3px rgba(255, 107, 61, 0.3) !important;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #a09085 !important;
+}
+
+body.dark-mode label,
+body.dark-mode .form-label {
+  color: #f1e7e0 !important;
+}
+
+body.dark-mode .form-card {
+  background: #241b16 !important;
+  border-color: #44342a !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Button Contrast in Dark Mode */
+body.dark-mode .btn-brand,
+body.dark-mode button.btn-brand,
+body.dark-mode a.btn-brand,
+body.dark-mode .auth-submit,
+body.dark-mode .cc-newsletter-btn {
+  background-color: #ff6b3d !important;
+  border-color: #ff6b3d !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+body.dark-mode .btn-brand:hover,
+body.dark-mode button.btn-brand:hover,
+body.dark-mode a.btn-brand:hover,
+body.dark-mode .auth-submit:hover,
+body.dark-mode .cc-newsletter-btn:hover {
+  background-color: #d9481f !important;
+  border-color: #d9481f !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .btn-brand-outline,
+body.dark-mode a.btn-brand-outline {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border: 2px solid #ff8a6b !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+body.dark-mode .btn-brand-outline:hover,
+body.dark-mode a.btn-brand-outline:hover {
+  background-color: #ffffff !important;
+  color: #1a120d !important;
+  border-color: #ffffff !important;
+}
+
+body.dark-mode .btn-dark,
+body.dark-mode a.btn-dark {
+  background-color: #382b23 !important;
+  border: 2px solid #544136 !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+body.dark-mode .btn-dark:hover,
+body.dark-mode a.btn-dark:hover {
+  background-color: #ff6b3d !important;
+  border-color: #ff6b3d !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .level-tab {
+  background-color: #271f1a !important;
+  border-color: #4a3a30 !important;
+  color: #f1e7e0 !important;
+}
+
+body.dark-mode .level-tab.active {
+  background-color: #ff6b3d !important;
+  border-color: #ff6b3d !important;
+  color: #ffffff !important;
+}
 
