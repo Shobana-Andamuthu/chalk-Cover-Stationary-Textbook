@@ -201,7 +201,7 @@
         search.type = 'button'; search.className = 'nav-icon-btn';
         search.setAttribute('aria-label','Search'); search.dataset.globalSearch='1';
         search.innerHTML = '<svg class="icon-svg" height="18" viewBox="0 0 24 24" width="18"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"></path><path d="m21 21-4.35-4.35"></path></svg>';
-        tools.insertBefore(search, tools.firstElementChild);
+        tools.appendChild(search);
       }
 
       // Wishlist button in every navbar.
@@ -210,7 +210,7 @@
         wish.href='wishlist.html'; wish.className='nav-icon-btn wishlist-nav-link';
         wish.setAttribute('aria-label','Wishlist'); wish.dataset.wishlistNav='1';
         wish.innerHTML = HEART_ICON + '<span class="wishlist-badge">0</span>';
-        tools.insertBefore(wish, tools.querySelector('.cart-nav-link') || tools.lastElementChild);
+        tools.appendChild(wish);
       }
     });
     updateWishlistBadges();
