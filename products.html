@@ -400,7 +400,14 @@
 .products-extra{padding:72px 0;background:var(--cream-50,#fff8f2)}
 .products-extra.alt{background:#fff}
 .products-extra .extra-head{max-width:760px;margin:0 auto 38px;text-align:center}
-.products-extra .extra-head h2{margin:8px 0 12px}
+.products-extra .extra-head h2,
+.product-guide h2,
+.builder-copy h2{
+  font-size:clamp(1.75rem,3.2vw,2.35rem);
+  font-weight:700;
+  line-height:1.18;
+  margin:8px 0 12px;
+}
 .products-extra .extra-head p{color:var(--ink-500);margin:0}
 .product-journey{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid #f0d8ca;border-radius:24px;overflow:hidden;background:#fff}
 .product-journey .journey-step{padding:28px 24px;position:relative;border-right:1px solid #f0d8ca}

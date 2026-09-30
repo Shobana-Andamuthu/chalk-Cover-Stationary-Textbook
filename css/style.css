@@ -193,8 +193,17 @@ body.dark-mode .nav-links.open{border-top-color:#3a2f29;}
   display:inline-flex;align-items:center;gap:8px;color:var(--green-700);font-weight:700;
   font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;
 }
-.eyebrow::before{content:"";width:22px;height:3px;background:var(--green-500);border-radius:3px;}
-.section-head h2{font-size:clamp(1.6rem,3vw,2.3rem);}
+.section-head h2,
+.extra-head h2,
+.product-guide h2,
+.builder-copy h2,
+.quick-estimate-section h2,
+.ready-booklist-section h2,
+.ready-bulk-section h2{
+  font-size:clamp(1.75rem,3.2vw,2.35rem);
+  font-weight:700;
+  line-height:1.18;
+}
 .section-head p{color:var(--ink-500);}
 /* ---------- Category cards ---------- */
 .cat-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px;}
