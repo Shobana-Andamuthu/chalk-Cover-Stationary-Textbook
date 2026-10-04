@@ -3832,8 +3832,12 @@ body.dark-mode .band {
 }
 .bulk-band-section h2,
 .band h2,
-.bulk-band-col h2 {
+.bulk-band-col h2,
+.products-cta-band h2,
+.products-cta-title {
   color: #ffffff !important;
+  font-size: clamp(1.95rem, 3.6vw, 2.7rem) !important;
+  line-height: 1.2 !important;
 }
 .bulk-band-section p,
 .band p,
